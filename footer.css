@@ -2,11 +2,7 @@
 
 #footer{
     font-family: 'Montserrat', sans-serif;
-}
-#footerFoot{
-    font-size: 11px;
-    font-weight: 500;
-    padding: 15px;
+    padding-top: 50px;
 }
 #footerHead{
     padding: 20px 0 30px 0;
@@ -33,7 +29,7 @@
 #footerHead div ul{
     display: flex;
     flex-direction: column;
-     gap: 20px;
+    gap: 20px;
 }
 #footerHead div ul li{
     list-style: none;
@@ -45,8 +41,94 @@
     padding: 20px 0;
 }
 .socialIcons{
+    padding-top:20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-size: 20px;
+}
+#footerFoot{
+    font-size: 11px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+}
+#footerFoot>ul{
+    display: flex;
+    flex-direction: row;
+    margin-left: -40px;
+    gap: 10px;
+}
+#footerFoot>ul>li{
+    list-style: none;
+}
+#footerFoot>div{
+    padding: 12px ;
+}
+#footerFoot>ul>li::before{
+    content: "|";
+    padding-right: 10px;
+}
+
+@media only screen and (max-width:480px) {
+    #footerHead{
+        flex-direction: column-reverse;
+    }
+    .footercontent{
+        font-size: 36px;
+    }
+    #footerHead div:last-child{
+        width:100%;
+        text-align: center;
+    }
+    .firstHead{
+        font-size: 18px;
+        position: relative;
+        padding:10px;
+        /* border: 1px greenyellow solid; */
+    }
+    .firstHead::after{
+        content: "+";
+        font-size: 30px;
+        position: absolute;
+        right: 10%;
+        top:0;
+        /* padding-bottom: 10px; */
+        /* border: 1px red solid; */
+        /* margin-bottom: 50px; */
+        /* bottom:5%; */
+
+    }
+    .socialIcons{
+        justify-content: space-around;
+        padding-top: 10px;
+        padding-bottom: 60px;
+    }
+    #footerFoot>ul{
+        display: none;
+    }
+    #footerFoot>div{
+        display: block;
+        font-size: 14px;
+        margin: -20px auto;
+    }
+    .firstHead~li{
+        display: none;
+        color: blue;
+        padding-left: 10px;
+    }
+    .firstHead.click~li{
+        display: flex;
+    }
+    .firstHead.clicktwo~li{
+        display: flex;
+    }
+    #footerHead>div>ul{
+        border-bottom: 1px grey solid;
+        padding-bottom: 20px;
+    }
+    #footerHead{
+        border-bottom: none;
+    }
+
 }

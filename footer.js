@@ -2,8 +2,8 @@ export const footer=()=>{
     document.getElementById("footer").innerHTML=`
     <div id="footerHead">
             <div>
-                <ul>
-                    <li class="firstHead">ABOUT R+F</li>
+                <ul >
+                    <div id="clickOne" class="firstHead">ABOUT R+F</div>
                     <li>PRESS ROOM</li>
                     <li>COMPANY INFO</li>
                     <li>EXECUTIVE TEAM</li>
@@ -14,7 +14,7 @@ export const footer=()=>{
             </div>
             <div>
                 <ul>
-                    <li class="firstHead">HELP</li>
+                    <div id="clickTwo" class="firstHead">HELP</div>
                     <li>PRODUCT & HELP CENTER</li>
                     <li>SHIPPING</li>
                     <li>SATISFACTION GUARANTEE</li>
@@ -36,6 +36,21 @@ export const footer=()=>{
             </div>
         </div>
         <div id="footerFoot">
-            © 2022 Rodan & Fields &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privacy Policy&nbsp;&nbsp; | &nbsp;&nbsp;Terms & Conditions&nbsp;&nbsp; | &nbsp;&nbsp;Accessibility&nbsp;&nbsp; | &nbsp;&nbsp;California Supply Chains Act&nbsp;&nbsp; | &nbsp;&nbsp;DSA Code Of Ethics&nbsp;&nbsp; | &nbsp;&nbsp;Disclaimer&nbsp;&nbsp; | &nbsp;&nbsp;Preference Center&nbsp;&nbsp; </div>
+            <div>© 2022 Rodan & Fields</div><ul>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+                <li>Accessibility</li>
+                <li>California Supply Chains Act</li>
+                <li>DSA Code Of Ethics</li>
+                <li>Disclaimer</li>
+                <li>Preference Center</li>
+            </ul>
+        </div>
     `
+    document.getElementById("clickOne").addEventListener("click",()=>{
+        document.getElementById("clickOne").classList.toggle("click");
+    })
+    document.getElementById("clickTwo").addEventListener("click",()=>{
+        document.getElementById("clickTwo").classList.toggle("clicktwo");
+    })
 }
