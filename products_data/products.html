@@ -12,7 +12,7 @@
         #section{
             display: flex;
             margin: 40px 0 0 0;
-            font-family:  "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
             
         }
@@ -153,8 +153,46 @@
             text-align: center;
             /* margin-top: 45px; */
         }
+        /* filter css */
+        #filter{
+            padding: 0 40px;
+        }
+        #filter h3{
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #222222;
+            cursor: pointer;
+            text-decoration: none solid rgb(33, 33, 33);
+        }
         #click_desc_div{
             border-bottom: 1px solid rgb(63, 63, 53);
+        }
+        .display_filter{
+            border-bottom: 1px solid rgb(63, 63, 53);
+        }
+        .heading{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        #filter h4{
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #222222;
+            cursor: pointer;
+            text-decoration: none solid rgb(33, 33, 33);
+            text-transform: uppercase;
+        }
+        .drop_icon_div{
+            height: 25px;
+            width: 25px;
+        }
+        .drop_icon_div>img{
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -177,7 +215,7 @@
             </div>
 
         </div>
-        
+        <!-- <img src="svg_image/expand_more.svg.svg"> -->
     </div>
 </body>
 </html>
@@ -302,17 +340,87 @@
     
     let lower = document.createElement("div");
     lower.setAttribute("id","lower");
-        let first_portion_filter = document.createElement("div");
+    //first
+        let first_filter = document.createElement("div");
             let heading1 = document.createElement("div");
-            heading1.setAttribute("id","heading1");
-                let h4 = document.createElement("h4");
-                h4.innerText = "Category";
+            heading1.setAttribute("class","heading");
+                let h4_1 = document.createElement("h4");
+                h4_1.innerText = "Category";
+                let drop_icon_div1 = document.createElement("div");
+                drop_icon_div1.setAttribute("class","drop_icon_div");
+                    let drop_icon1 = document.createElement("img");
+                    drop_icon1.setAttribute("src","svg_image/expand_more.svg.svg");
+                    drop_icon1.setAttribute("alt","icon");
+                drop_icon_div1.append(drop_icon1);
+                drop_icon_div1.addEventListener("click",function(){
+                    dispaly_heading1_filter();
+                });
+            heading1.append(h4_1,drop_icon_div1);
+            let display_filter1 = document.createElement("div");
+            display_filter1.setAttribute("class","display_filter");
+        first_filter.append(heading1,display_filter1);
+    //second;
+    let second_filter = document.createElement("div");
+            let heading2 = document.createElement("div");
+            heading2.setAttribute("class","heading");
+                let h4_2 = document.createElement("h4");
+                h4_2.innerText = "SKIN CONCERN";
+                let drop_icon_div2 = document.createElement("div");
+                drop_icon_div2.setAttribute("class","drop_icon_div");
+                    let drop_icon2 = document.createElement("img");
+                    drop_icon2.setAttribute("src","svg_image/expand_more.svg.svg");
+                    drop_icon2.setAttribute("alt","icon");
+                drop_icon_div2.append(drop_icon2);
+                drop_icon_div2.addEventListener("click",function(){
+                    dispaly_heading2_filter();
+                });
+            heading2.append(h4_2,drop_icon_div2);
+            let display_filter2 = document.createElement("div");
+            display_filter2.setAttribute("class","display_filter");
+        second_filter.append(heading2,display_filter2);
+    //third
+    let third_filter = document.createElement("div");
+            let heading3 = document.createElement("div");
+            heading3.setAttribute("class","heading");
+                let h4_3 = document.createElement("h4");
+                h4_3.innerText = "APPLICATION AREA";
+                let drop_icon_div3 = document.createElement("div");
+                drop_icon_div3.setAttribute("class","drop_icon_div");
+                    let drop_icon3 = document.createElement("img");
+                    drop_icon3.setAttribute("src","svg_image/expand_more.svg.svg");
+                    drop_icon3.setAttribute("alt","icon");
+                drop_icon_div3.append(drop_icon3);
+                drop_icon_div3.addEventListener("click",function(){
+                    dispaly_heading3_filter();
+                });
+            heading3.append(h4_3,drop_icon_div3);
+            let display_filter3 = document.createElement("div");
+            display_filter3.setAttribute("class","display_filter");
+        third_filter.append(heading3,display_filter3);
+    //fourth
+    let fourth_filter = document.createElement("div");
+            let heading4 = document.createElement("div");
+            heading4.setAttribute("class","heading");
+                let h4_4 = document.createElement("h4");
+                h4_4.innerText = "PRODUCT LINE";
+                let drop_icon_div4 = document.createElement("div");
+                drop_icon_div4.setAttribute("class","drop_icon_div");
+                    let drop_icon4 = document.createElement("img");
+                    drop_icon4.setAttribute("src","svg_image/expand_more.svg.svg");
+                    drop_icon4.setAttribute("alt","icon");
+                drop_icon_div4.append(drop_icon4);
+                drop_icon_div4.addEventListener("click",function(){
+                    dispaly_heading4_filter();
+                });
+            heading4.append(h4_4,drop_icon_div4);
+            let display_filter4 = document.createElement("div");
+            display_filter4.setAttribute("class","display_filter");
+        fourth_filter.append(heading4,display_filter4);
+    lower.append(first_filter,second_filter,third_filter,fourth_filter);
+    document.getElementById("filter").append(lower);
 
-                let drop_icon_div = document.createElement("div");
-                drop_icon_div.setAttribute("class","drop_icon_div");
-                    let drop_icon = document.createElement("img");
-                    drop_icon.setAttribute("src","");
-                    drop_icon.setAtt
+
+               
 
         
 
