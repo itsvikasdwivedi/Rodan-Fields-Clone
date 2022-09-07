@@ -1,0 +1,962 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet">
+    <title>Rodan + Rields® | Dermatologist Inspired Skincare Progucts</title>
+
+    <!-- font awesome cdn link  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+     <link rel="stylesheet" href="landing.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <!-- <script src="https://kit.fontawesome.com/4a73ef5ad9.js" crossorigin="anonymous"></script> -->
+
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
+
+    <!-- CSS only boostrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        @font-face {
+            font-family: helvetica;
+            src: url(../rodanandfields/font/HelveticaNeue.otf);
+
+        }
+
+        @font-face {
+            font-family: nova;
+            src: url(../rodanandfields/font/FontsFree-Net-ProximaNova-Regular.ttf);
+        }
+
+        #MainContent {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #MainContentTileDiv {
+            /* border: 2px solid saddlebrown; */
+            margin-left: 4%;
+            margin-right: 1%;
+
+
+
+
+
+        }
+
+
+        #MainContentTileDiv>h2 {
+
+            color: rgb(34, 34, 34);
+            font-size: 32px;
+            font-weight: 300;
+            font-family: 'Gideon Roman', cursive;
+            margin-bottom: 40px;
+        }
+
+
+        #MainContentTileDiv p:nth-child(2) {
+
+            font-family: helvetica;
+            font-size: 18px;
+
+            font-style: normal;
+            padding-right: 50px;
+            font-weight: 500;
+            margin-bottom: 40px;
+
+        }
+
+        #MainContentTileDiv p:nth-child(3),
+        a {
+            font-size: 13px;
+            margin-bottom: 40px;
+            font-family: helvetica;
+            font-weight: 100;
+
+            color: rgb(52, 51, 51);
+        }
+
+        #lapImage {
+
+
+            max-height: 650px;
+            width: 68%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+
+
+
+        }
+
+        #MainContentTileDiv button {
+            width: 82%;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            font-size: larger;
+
+
+        }
+
+        #tabImage {
+            display: none;
+        }
+
+        /* Derm-Designed  partD */
+
+        #DermDiv {
+            background-color: #f8f4f2;
+            padding-top: 68px;
+            padding-bottom: 68px;
+            text-align: center;
+
+        }
+
+        #DermDiv>button {
+            width: 400px;
+            border-radius: 5px;
+            padding: 17px;
+            background-color: #f8f4f2;
+            font-size: medium;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+
+        }
+
+        #DermDiv>button:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        #DermDiv h1 {
+
+            color: rgb(34, 34, 34);
+
+            font-family: 'Gideon Roman', cursive;
+            font-weight: 400;
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 35px;
+
+
+
+
+        }
+
+        #DermIteam {
+            display: grid;
+            grid-template-columns: repeat(6, 6fr);
+            gap: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: #f8f4f2;
+        }
+
+        #DermIteam>div {
+            margin-top: 40px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            border-radius: 8px;
+            color: #737272;
+            text-align: center;
+            padding-bottom: 20px;
+            background-color: white;
+
+        }
+
+        #DermIteam>div img {
+            margin-bottom: 10px;
+            width: 100%;
+            border-radius: 8px 8px 0px 0px;
+        }
+
+        #DermIteam>div img:hover {
+            content: url("https://www.rodanandfields.com/en-us/medias/Category-Image-1.png?context=bWFzdGVyfHJvb3R8MzcxNDI1fGltYWdlL3BuZ3xoOGIvaDJiLzEzOTAwNTk3MTMzMzQyLnBuZ3w5NTMwMDY2NDkxOTRmNDI1Mjc5ZjIyOTYxYjUyZTFiNDkyNDZhODZmNTJlZmQ4ZjU4NzBmZjI2NzFiMzhmZTMy");
+            border-radius: 8px 8px 8px 8px;
+            cursor: pointer;
+        }
+
+
+        /* Doctor part */
+        #doctorDiv {
+            /* display: flex;
+           
+            gap: 130px;
+            
+            padding-top: 80px;
+            padding-bottom: 80px;
+            background-color: #f8f8f8;
+            overflow-x: auto;
+    white-space: nowrap; */
+            background-color: #f8f8f8;
+            padding-top: 70px;
+            padding-bottom: 20px;
+
+
+
+
+        }
+
+        #doctorItem {
+
+            text-align: center;
+
+            padding-left: 20px;
+            padding-right: 20px;
+
+
+
+        }
+
+
+
+
+
+
+        #doctorItem img {
+            width: 100%;
+            /* ProximaNovaRegular, */
+            border-radius: 3px 3px 3px 3px;
+        }
+
+        #doctorItem h1 {
+            font-family: nova;
+            font-weight: 500;
+            font-size: 28px;
+            color: black;
+
+
+        }
+
+        #doctorItem>div {
+            /* font-family: nova; */
+
+            font-size: 20px;
+            font-stretch: extra-expanded;
+            margin-bottom: 20px;
+            line-height: 30px;
+            text-align: center;
+
+
+        }
+
+        #doctorItem>a {
+            font-size: larger;
+            font-family: nova;
+            font-weight: 400;
+
+        }
+
+        /* #doctorDiv  .owl-stage{
+            background-color: #f8f8f8;
+    padding-top: 70px;
+    padding-bottom: 70px;
+        } */
+
+
+
+        /* div ::-webkit-scrollbar       {background-color:rgb(246, 246, 246);height:6px ;border-radius:10px;}
+div::-webkit-scrollbar-track {background-color:#DFDFDF;border-radius:10px}
+div::-webkit-scrollbar-thumb {background-color:#545353;border-radius:10px;} */
+
+
+
+
+        /* girl produc section */
+
+        #girlPductdivparent {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 40px;
+            padding-bottom: 50px;
+        }
+
+        #girlProductItem {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 5px;
+
+
+            background-color: #f4efe7;
+
+
+        }
+
+        #girlProductItem>div {
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-bottom: 50px;
+
+
+
+
+        }
+
+        #girlProductItem>div h1 {
+
+            font-size: 45px;
+            font-weight: 400;
+            font-family: 'Gideon Roman', cursive;
+
+
+
+
+        }
+
+        #girlProductItem img {
+            height: 380px;
+            width: 380;
+            border-radius: 5px 5px 5px 5px;
+
+
+
+        }
+
+        #girlProductItem p {
+            font-size: 20px;
+            line-height: 30px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #girlProductItem a {
+            font-size: 20px;
+            margin-bottom: 70px;
+
+        }
+
+
+        /* courosol part icon */
+
+
+
+        /* fff */
+
+        .owl-carousel .owl-nav span {
+            padding: 12px;
+            background-color: #eeeeee;
+            opacity: 0.5;
+
+        }
+
+        .owl-carousel {
+            position: relative;
+
+        }
+
+        .owl-next,
+        .owl-prev {
+            position: absolute;
+            top: 45%;
+
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+        }
+
+        .owl-next {
+            right: -30px;
+            display: flex;
+
+        }
+
+        .owl-prev {
+            left: -30px;
+            display: flex;
+        }
+
+
+
+
+        .owl-carousel .nav-btn {
+            position: sticky;
+        }
+
+        .owl-carousel .owl-prev.disabled,
+        .owl-carousel .owl-next.disabled {
+            pointer-events: none;
+            opacity: 0;
+        }
+
+       #botomItemParent>div span:nth-child(2){
+        position: absolute;
+        top: 12px;
+        right: 18px;
+        color: white;
+        display: none;
+
+         
+
+       }
+       #botomItemParent>div img{
+        border-radius: 2px 2px 2px 2px;
+       }
+
+       /* courlosol for botom */
+
+       #botomItemParent .owl-nav  button  {
+           
+           
+            height: 100%;
+            background-color: white;
+            opacity: 0.5;
+            text-align: center;
+
+
+                        
+            
+
+
+        }
+        #botomItemParent .owl-nav  button span:hover{
+            color: #737272;
+        }
+
+     
+
+       
+        #botomItemParent .owl-next {
+            right: -5px;
+            display: flex;
+            align-items: center;
+            
+            
+
+            
+
+        }
+
+        #botomItemParent .owl-prev {
+            left: -5px;
+            display: flex;
+            align-items: center;
+        }
+
+
+
+
+        .owl-carousel .nav-btn {
+            position: sticky;
+        }
+
+        .owl-carousel .owl-prev.disabled,
+        .owl-carousel .owl-next.disabled {
+            pointer-events: none;
+            opacity: 0;
+        }
+
+
+        @media only screen and (min-width:481px) and (max-width: 973px) {
+
+            #lapImage {
+                display: none;
+            }
+
+            #tabImage {
+                display: block;
+                max-height: 400px;
+                width: 100%;
+                margin-bottom: 50px;
+            }
+
+            #MainContent {
+                margin: 0px;
+                display: block;
+                text-align: center;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            #MainContentTileDiv p:nth-child(2) {
+
+                font-family: helvetica;
+                font-size: 18px;
+
+                font-style: normal;
+
+                font-weight: 500;
+                margin-bottom: 40px;
+
+            }
+
+            #MainContentTileDiv p:nth-child(3),
+            a {
+                font-size: 13px;
+                margin-bottom: 40px;
+                font-family: helvetica;
+                font-weight: 100;
+
+                color: rgb(52, 51, 51);
+            }
+
+            #MainContentTileDiv button {
+                width: 70%;
+                padding: 10px;
+                background-color: white;
+                border-radius: 5px;
+                font-size: larger;
+
+
+            }
+
+            /* Derm digin */
+            #DermIteam {
+
+                grid-template-columns: repeat(3, 3fr);
+
+            }
+
+            #DermDiv>button {
+                width: 400px;
+
+
+            }
+
+
+
+
+
+        }
+
+
+
+        @media only screen and (max-width: 480px) {
+
+            #lapImage {
+                display: none;
+            }
+
+            #tabImage {
+                display: block;
+                max-height: 400px;
+                width: 100%;
+                margin-bottom: 10px;
+                content: url("https://www.rodanandfields.com/en-us/medias/BMSM-HP-US-Mobile-02-no-ITFG.gif?context=bWFzdGVyfHJvb3R8NDAwNDkwfGltYWdlL2dpZnxoNzcvaDNiLzE1NTQ3NTE2NzQ3ODA2LmdpZnwzNWMxN2YzMmM0ZDZlYWJlYjE5YTAwMjJhZWU4NjkwMTIzM2EzMWYyNzlmZWI1MzRhYjI1MmZiZjM3NzYwMjg0");
+            }
+
+            #MainContent {
+                margin: 0px;
+                display: block;
+                text-align: center;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            #MainContentTileDiv p:nth-child(2) {
+
+                font-family: helvetica;
+                font-size: 18px;
+
+                font-style: normal;
+
+                font-weight: 500;
+                margin-bottom: 40px;
+
+            }
+
+            #MainContentTileDiv>h2 {
+
+                color: rgb(34, 34, 34);
+                font-size: 32px;
+                font-weight: 300;
+                font-family: 'Gideon Roman', cursive;
+                margin-bottom: 30px;
+            }
+
+            #MainContentTileDiv p:nth-child(3),
+            a {
+                font-size: 13px;
+                margin-bottom: 30px;
+                font-family: helvetica;
+                font-weight: 100;
+
+                color: rgb(52, 51, 51);
+            }
+
+            #MainContentTileDiv button {
+                width: 80%;
+                padding: 10px;
+                background-color: white;
+                border-radius: 5px;
+                font-size: larger;
+
+
+            }
+
+            #DermIteam {
+
+                grid-template-columns: repeat(2, 2fr);
+
+            }
+
+            #DermDiv>button {
+                width: 260px;
+
+
+            }
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="MainContent">
+
+
+        <img id="tabImage"
+            src="https://www.rodanandfields.com/en-us/medias/BMSM-HP-US-Desktop-less-frames-for-GIF-no-ITFG-02.gif?context=bWFzdGVyfHJvb3R8MTI3NDIyMXxpbWFnZS9naWZ8aDJmL2hjZC8xNTU0NzUxNjYxNjczNC5naWZ8OTA0ZDg0ZDcwYWUyMWQ4NjljMjlmZGJiNjAwODdiZmYwMjA1NWMzMTE0MjMwMjMzZGM3OTMwOTU5ZGY3ZGYyNw"
+            alt="logo">
+        <div id="MainContentTileDiv">
+            <h2>Save Up to 20% on Derm- Designed Skincare</h2>
+            <p>1 week only to buy more, save more this Labor Day.</p>
+            <p>Offer valid August 30 – September 5, 2022. <a href="">See Terms & Conditions.</a> Exclusions apply. </p>
+            <button>SHOP NOW</button>
+
+
+        </div>
+
+
+
+        <img id="lapImage"
+            src="https://www.rodanandfields.com/en-us/medias/BMSM-HP-US-Desktop-less-frames-for-GIF-no-ITFG-02.gif?context=bWFzdGVyfHJvb3R8MTI3NDIyMXxpbWFnZS9naWZ8aDJmL2hjZC8xNTU0NzUxNjYxNjczNC5naWZ8OTA0ZDg0ZDcwYWUyMWQ4NjljMjlmZGJiNjAwODdiZmYwMjA1NWMzMTE0MjMwMjMzZGM3OTMwOTU5ZGY3ZGYyNw"
+            alt="logo">
+
+
+
+    </div>
+
+    <div id="DermDiv">
+        <h1>Derm-Designed Skincare for Every Concern</h1>
+        <div id="DermIteam">
+
+            <div>
+
+                <img src="https://www.rodanandfields.com/en-us/medias/Fine-Lines-Wrinkles-Card.jpg?context=bWFzdGVyfHJvb3R8NTgzMDF8aW1hZ2UvanBlZ3xoODYvaGY2LzEyODg5MTg4MjA0NTc0LmpwZ3wzYjIwYmU0ZWI3NWZkYjFmNzJjNjVmZWNhYmJmN2RlODdjYjFmNTU0ODZjZWE0YjQ5NWIzNWQzYmQyN2UxZjli"
+                    alt="">
+                <h3>Fine Lines + Wrinkles</h3>
+            </div>
+
+            <div>
+
+                <img src="https://www.rodanandfields.com/en-us/medias/Fine-Lines-Wrinkles-Card.jpg?context=bWFzdGVyfHJvb3R8NTgzMDF8aW1hZ2UvanBlZ3xoODYvaGY2LzEyODg5MTg4MjA0NTc0LmpwZ3wzYjIwYmU0ZWI3NWZkYjFmNzJjNjVmZWNhYmJmN2RlODdjYjFmNTU0ODZjZWE0YjQ5NWIzNWQzYmQyN2UxZjli"
+                    alt="">
+                <h3>Fine Lines + Wrinkles</h3>
+            </div>
+            <div>
+
+                <img src="https://www.rodanandfields.com/en-us/medias/Fine-Lines-Wrinkles-Card.jpg?context=bWFzdGVyfHJvb3R8NTgzMDF8aW1hZ2UvanBlZ3xoODYvaGY2LzEyODg5MTg4MjA0NTc0LmpwZ3wzYjIwYmU0ZWI3NWZkYjFmNzJjNjVmZWNhYmJmN2RlODdjYjFmNTU0ODZjZWE0YjQ5NWIzNWQzYmQyN2UxZjli"
+                    alt="">
+                <h3>Fine Lines + Wrinkles</h3>
+            </div>
+            <div>
+
+                <img src="https://www.rodanandfields.com/en-us/medias/Fine-Lines-Wrinkles-Card.jpg?context=bWFzdGVyfHJvb3R8NTgzMDF8aW1hZ2UvanBlZ3xoODYvaGY2LzEyODg5MTg4MjA0NTc0LmpwZ3wzYjIwYmU0ZWI3NWZkYjFmNzJjNjVmZWNhYmJmN2RlODdjYjFmNTU0ODZjZWE0YjQ5NWIzNWQzYmQyN2UxZjli"
+                    alt="">
+                <h3>Fine Lines + Wrinkles</h3>
+            </div>
+            <div>
+
+                <img src="https://www.rodanandfields.com/en-us/medias/Fine-Lines-Wrinkles-Card.jpg?context=bWFzdGVyfHJvb3R8NTgzMDF8aW1hZ2UvanBlZ3xoODYvaGY2LzEyODg5MTg4MjA0NTc0LmpwZ3wzYjIwYmU0ZWI3NWZkYjFmNzJjNjVmZWNhYmJmN2RlODdjYjFmNTU0ODZjZWE0YjQ5NWIzNWQzYmQyN2UxZjli"
+                    alt="">
+                <h3>Fine Lines + Wrinkles</h3>
+            </div>
+            <div>
+
+                <img src="https://www.rodanandfields.com/en-us/medias/Fine-Lines-Wrinkles-Card.jpg?context=bWFzdGVyfHJvb3R8NTgzMDF8aW1hZ2UvanBlZ3xoODYvaGY2LzEyODg5MTg4MjA0NTc0LmpwZ3wzYjIwYmU0ZWI3NWZkYjFmNzJjNjVmZWNhYmJmN2RlODdjYjFmNTU0ODZjZWE0YjQ5NWIzNWQzYmQyN2UxZjli"
+                    alt="">
+                <h3>Fine Lines + Wrinkles</h3>
+            </div>
+
+        </div>
+        <button>Shop All Products</button>
+
+    </div>
+
+    <!-- giral product section -->
+    <div id="girlPductdivparent">
+        <div id="girlProductDiv" class="owl-carousel owl-theme">
+
+            <div id="girlProductItem">
+
+                <div>
+                    <h1>Ultimate Eye Cream</h1>
+                    <p>6,000 five-star reviews and counting!</p>
+
+                    <a href="">Shop Now</a>
+                </div>
+
+                <img src="https://www.rodanandfields.com/en-us/medias/Homepage-PromoModule-MFEC-Desktop.jpg?context=bWFzdGVyfHJvb3R8MzgyNDU0fGltYWdlL2pwZWd8aDJjL2hkZi8xMzg1NDY1ODIzMjM1MC5qcGd8YjQwNjFlZTlkMDUwNTM2ZDUxZTI2YzE5ZmFhMzM4ZjlkYmQxMTNhNDg2NzJjMDc5NzhmNTEzMTYzYWY5NGI2NA"
+                    alt="">
+
+            </div>
+
+            <div id="girlProductItem">
+
+                <div>
+                    <h1>Ultimate Eye Cream</h1>
+                    <p>6,000 five-star reviews and counting!</p>
+
+                    <a href="">Shop Now</a>
+                </div>
+
+                <img src="https://www.rodanandfields.com/en-us/medias/Homepage-PromoModule-MFEC-Desktop.jpg?context=bWFzdGVyfHJvb3R8MzgyNDU0fGltYWdlL2pwZWd8aDJjL2hkZi8xMzg1NDY1ODIzMjM1MC5qcGd8YjQwNjFlZTlkMDUwNTM2ZDUxZTI2YzE5ZmFhMzM4ZjlkYmQxMTNhNDg2NzJjMDc5NzhmNTEzMTYzYWY5NGI2NA"
+                    alt="">
+
+            </div>
+
+
+            <div id="girlProductItem">
+
+                <div>
+                    <h1>Ultimate Eye Cream</h1>
+                    <p>6,000 five-star reviews and counting!</p>
+
+                    <a href="">Shop Now</a>
+                </div>
+
+                <img src="https://www.rodanandfields.com/en-us/medias/Homepage-PromoModule-MFEC-Desktop.jpg?context=bWFzdGVyfHJvb3R8MzgyNDU0fGltYWdlL2pwZWd8aDJjL2hkZi8xMzg1NDY1ODIzMjM1MC5qcGd8YjQwNjFlZTlkMDUwNTM2ZDUxZTI2YzE5ZmFhMzM4ZjlkYmQxMTNhNDg2NzJjMDc5NzhmNTEzMTYzYWY5NGI2NA"
+                    alt="">
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div id="doctorDivparent">
+        <div id="doctorDiv" class="owl-carousel owl-theme">
+            <div id="doctorItem">
+                <img src="https://www.rodanandfields.com/en-us/medias/DrImage-HP-USCA.jpg?context=bWFzdGVyfHJvb3R8MTU1NTk2fGltYWdlL2pwZWd8aGI5L2gxYS8xNTM1MjQ4MTM0OTY2Mi5qcGd8MDhhZTg4YmI3NzkwNjYyYmE3OGU5MjMwNGFlMTIxMDFjMDI5N2YyMjliOGZlNmMzYWFhNTg5MmM3YTRkNzY4Nw"
+                    alt="">
+
+                <h1>Derm-Designed</h1>
+                <div>Dr. Katie Rodan + Dr. Kathy Fields founded R+F to give everyone access to life-changing skincare.
+                </div>
+                <a href="">Meet Our Doctors</a>
+
+            </div>
+
+
+            <div id="doctorItem">
+                <img src="https://www.rodanandfields.com/en-us/medias/DrImage-HP-USCA.jpg?context=bWFzdGVyfHJvb3R8MTU1NTk2fGltYWdlL2pwZWd8aGI5L2gxYS8xNTM1MjQ4MTM0OTY2Mi5qcGd8MDhhZTg4YmI3NzkwNjYyYmE3OGU5MjMwNGFlMTIxMDFjMDI5N2YyMjliOGZlNmMzYWFhNTg5MmM3YTRkNzY4Nw"
+                    alt="">
+
+                <h1>Derm-Designed</h1>
+                <div>Dr. Katie Rodan + Dr. Kathy Fields founded R+F to give everyone access to life-changing skincare.
+                </div>
+                <a href="">Meet Our Doctors</a>
+            </div>
+
+            <div id="doctorItem">
+                <img src="https://www.rodanandfields.com/en-us/medias/DrImage-HP-USCA.jpg?context=bWFzdGVyfHJvb3R8MTU1NTk2fGltYWdlL2pwZWd8aGI5L2gxYS8xNTM1MjQ4MTM0OTY2Mi5qcGd8MDhhZTg4YmI3NzkwNjYyYmE3OGU5MjMwNGFlMTIxMDFjMDI5N2YyMjliOGZlNmMzYWFhNTg5MmM3YTRkNzY4Nw"
+                    alt="">
+
+                <h1>Derm-Designed</h1>
+                <div>Dr. Katie Rodan + Dr. Kathy Fields founded R+F to give everyone access to life-changing skincare.
+                </div>
+                <a href="">Meet Our Doctors</a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Botom Part -->
+    <div id="botomPartDiv">
+          <h1>@Rodanandfields</h1>
+          <div id="botomItemParent" class="owl-carousel owl-theme">
+             
+
+            <div>
+                <img src="https://cdn-yotpo-images-production.yotpo.com/instagram/35/18149372425211935/low_resolution.jpg" alt="">
+                <span class="material-symbols-outlined">
+                    video_camera_front
+                    </span>
+            </div>
+
+            <div>
+                <img src="https://cdn-yotpo-images-production.yotpo.com/instagram/35/18149372425211935/low_resolution.jpg" alt="">
+                <span class="material-symbols-outlined">
+                    video_camera_front
+                    </span>
+            </div>
+
+            <div>
+                <img src="https://cdn-yotpo-images-production.yotpo.com/instagram/35/18149372425211935/low_resolution.jpg" alt="">
+                <span class="material-symbols-outlined">
+                    video_camera_front
+                    </span>
+            </div>
+
+            <div>
+                <img src="https://cdn-yotpo-images-production.yotpo.com/instagram/35/18149372425211935/low_resolution.jpg" alt="">
+                <span class="material-symbols-outlined">
+                    video_camera_front
+                    </span>
+            </div>
+
+            <div>
+                <img src="https://cdn-yotpo-images-production.yotpo.com/instagram/35/18149372425211935/low_resolution.jpg" alt="">
+                <span class="material-symbols-outlined">
+                    video_camera_front
+                    </span>
+            </div>
+
+            <div>
+                <img src="https://cdn-yotpo-images-production.yotpo.com/instagram/35/18149372425211935/low_resolution.jpg" alt="">
+                <span class="material-symbols-outlined">
+                    video_camera_front
+                    </span>
+            </div>
+            
+
+            
+
+             
+              
+
+          </div>
+
+          
+
+    </div>
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('#girlProductDiv').owlCarousel({
+
+                autoHeight: true,
+                margin: 20,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 2
+                    }
+                }
+            })
+            $(".owl-prev").html('<span class="material-symbols-outlined">arrow_back_ios</span>');
+            $(".owl-next").html('<span class="material-symbols-outlined">arrow_forward_ios</span>');
+
+
+        })
+
+
+        $(document).ready(function () {
+
+            $('#doctorDiv').owlCarousel({
+
+                autoHeight: true,
+                margin: 100,
+                nav:false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            })
+
+
+
+        })
+
+
+       
+        $(document).ready(function () {
+
+$('#botomItemParent').owlCarousel({
+
+    autoHeight: true,
+    margin: 20,
+    nav: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 5
+        }
+    }
+})
+$(".owl-prev").html('<span class="material-symbols-outlined">arrow_back_ios</span>');
+$(".owl-next").html('<span class="material-symbols-outlined">arrow_forward_ios</span>');
+
+
+})
+
+
+
+
+    </script>
+
+</body>
+
+</html>
