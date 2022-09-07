@@ -189,6 +189,7 @@
     font-weight: 600;
     width: 32%;
     padding: 9.5px;
+    cursor: pointer;
 }
 #g_Continuebtn{
     width:100%;
@@ -205,12 +206,12 @@
     text-decoration: none;
     color:black
 }
-#g_Checkoutbtn>a{
+#g_Checkoutbtn>a,#startShop>a{
     text-decoration: none;
     color:white;
 
 }
-#g_Checkoutbtn{
+#g_Checkoutbtn,#startShop{
     width:100%;
     margin-top: 15px;
     padding:10px 0;
@@ -231,6 +232,34 @@
 .cardDetails>img{
     width:30px;
 }
+#lastLine{
+    font-size: 12px;
+    text-align: center;
+}
+#lastLine>a{
+    color: black;
+}
+
+
+#cart_container>#errHead{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+    gap: 0;
+}
+#errHead>h3{
+    font-size: 33px;
+    font-weight: 300;
+    margin-bottom: 2px;
+}
+.g_order>div>.notshow{
+    display: none;
+}
+.g_order>div>.notshow.here{
+    display: flex;
+}
 
 
 @media screen and (max-width:480px) {
@@ -244,6 +273,9 @@
     #selectedProduct{
         width: 165%;
     }
+    .g_order .g_order_title{
+        width: 92%;
+    }
     .g_order>div{
         width:92%;
     }
@@ -254,9 +286,8 @@
         outline: none;
     }
 }
-@media screen and (min-width:481px) and (max-width:768px)  {
+@media screen and (min-width:481px) and (max-width:1024px)  {
     #cart_container{
-        /* flex-direction: column; */
         width: 95%;
     }
     
