@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #section{
+            display: flex;
+            margin: 40px 0 0 0;
+            font-family:  "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+            
+        }
+        #filter{
+            width: 26%;
+            border: 1px solid red;
+        }
+        #products{
+            width: 74%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            /* gap: 10px; */
+            /* border: 1px solid blue; */
+        }
+        .card{
+            /* border: 1px solid green; */
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 24px;
+            text-decoration: none solid rgb(63, 63, 63);
+            word-spacing: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            width: 100%;
+            /* height: 474px; */
+        }
+        .img-div{
+            width: 229px;
+            margin: auto;
+            height: 229px;
+        }
+        .img-div>img{
+            width: 100%;
+            height: 100%;
+        }
+        .status{
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            line-height: 18px;
+            text-decoration: none solid rgb(124, 127, 136);
+            text-align: left;
+            word-spacing: 0;
+            color: #7C7F88;
+            height: 18px;
+            margin: 0 12px 4px 12px;
+            /* min-height: 18px; */
+            min-width: auto;
+            font-weight: 500;
+        }
+        .title,.info,.price{
+            /* font-family: ProximaNovaMedium, Arial,sans-serif; */
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            line-height: 24px;
+            text-decoration: none solid rgb(34, 34, 34);
+            text-align: left;
+            word-spacing: 0;
+            color: #222222;
+            /* height: 24px; */
+            width: 310px;
+            margin: 0 12px 8px 12px;
+            /* min-height: auto; */
+            min-width: auto;
+            font-weight: 500;
+        }
+        .info{
+            font-size: 14px;
+            line-height: 20.02px;
+            /* height: 40px; */
+            margin: 0 12px 0 12px;
+            padding: 0 0 8px 0;
+            font-weight: 400;
+        }
+        .price{
+            font-weight: 500;
+            text-decoration: none solid rgb(63, 63, 63);
+            color: #3f3f3f;
+        }
+        /* .rating-wrapper{
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 300;
+            text-decoration: none solid rgb(63, 63, 63);
+            height: 51px;
+            width: 310px;
+            margin: 0 12px 0 12px;
+            min-width: auto;
+            min-width: auto;
+        } */
+        #addtobag{
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            line-height: 24px;
+            text-decoration: none solid rgb(34, 34, 34);
+            text-align: center;
+            text-transform: uppercase;
+            /* vertical-align: middle; */
+            display: block;
+            margin: auto;
+            white-space: nowrap;
+            word-spacing: 0;
+            color: #222222;
+            height: 40px;
+            width: 310px;
+            border: 1px solid #222222;
+            border-radius: 7px;
+            background-color: #ffffff;
+            padding: 0 16px 0 16px;
+            max-height: 40px; 
+            box-shadow: 0px 3px 2px rgba(63, 63, 63, 0.3);
+        }
+        #addtobag:hover,#result>button:hover{
+            box-shadow: inset -3px -3px 2px rgba(63, 63, 63, 0.3);
+            cursor: pointer;
+        }
+        #result{
+            width: 100%;
+            /* height: 86px; */
+            margin: 40px 0 30px 0;
+        }
+        #result>button{
+            padding: 8px 16px;
+            background: white;
+            border: 1px solid #222222;
+            box-shadow: 0px 3px 2px rgba(63, 63, 63, 0.3);
+            display: block;
+            margin: 10px auto 0 auto;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+        #result>div{
+            width: 100%;
+            font-weight: 500;
+            font-size: 13px;
+            text-align: center;
+            /* margin-top: 45px; */
+        }
+        #click_desc_div{
+            border-bottom: 1px solid rgb(63, 63, 53);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="nav">
+
+        </div>
+        <div id="section">
+            <div id="filter">
+
+            </div>
+            <div id="products-sep">
+                <div id="products">
+
+                </div>
+                <div id="result">
+
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+</body>
+</html>
+<script>
+    const fetchingdata= async (min=0,max=24) =>{
+        if(max>84){
+            max = max-84+min;
+        }
+        if(min!==84){
+            let res = await fetch(`http://localhost:3786/products?_start=${min}&_end=${max}`);
+            let obj = await res.json();
+            display_products(obj,min,max);
+        }
+    }    
+    const display_products = (data,min,max) => {
+        console.log(data);
+        data.forEach((element,index) => {
+            let card = document.createElement("div");
+            card.setAttribute("class","card");
+
+            let upper = document.createElement("div");
+            upper.setAttribute("class","upper");
+                let img_div =  document.createElement("div");
+                img_div.setAttribute("class","img-div");
+                    let image = document.createElement("img");
+                    image.setAttribute("src",element.image);
+                    image.setAttribute("alt",index);
+                img_div.append(image);
+
+                let sts = document.createElement("div");
+                sts.setAttribute("class","status");
+                sts.innerText = element.status;
+
+                let ttl = document.createElement("div");
+                ttl.setAttribute("class","title");
+                ttl.innerText = element.title;
+
+                let ifo = document.createElement("div");
+                ifo.setAttribute("class","info");
+                ifo.innerText = element.info;
+
+                let prc = document.createElement("div");
+                prc.setAttribute("class","price");
+                prc.innerText = "$"+element.price;
+
+                let rating_wrapper = document.createElement("div");
+                rating_wrapper.setAttribute("class","rating-wrapper");
+
+                    let rtgstar = document.createElement("span");
+                    rtgstar.setAttribute("class","rating-star");
+                    rtgstar.innerText = "*****";
+
+                    let rtg = document.createElement("span");
+                    rtg.setAttribute("class","rating");
+                    rtg.innerText = element.rating+"20";
+
+                    let vt = document.createElement("span");
+                    vt.setAttribute("class","votes");
+                    vt.innerText = element.rating_votes+"140";
+                rating_wrapper.append(rtgstar,rtg,vt);
+            upper.append(img_div,sts,ttl,ifo,prc,rating_wrapper);
+
+            let lower = document.createElement("div");
+            lower.setAttribute("class","lower");
+                let addtobagbtn = document.createElement("button");
+                addtobagbtn.setAttribute("id","addtobag");
+                addtobagbtn.innerText = "ADD To BAG"
+            lower.append(addtobagbtn);
+            card.append(upper,lower);
+            document.getElementById("products").append(card);
+
+        });
+        if(max!==84){
+
+            document.getElementById("result").innerHTML = "";
+
+            let resultdata = document.createElement("div");
+            resultdata.innerText = "Showing " + max + " of 84";
+            let btn = document.createElement("button");
+            btn.innerText = "SEE MORE";
+            btn.addEventListener("click",function(){
+                fetchingdata(max,max+24);
+            })
+            document.getElementById("result").append(resultdata,btn);
+        }
+        else{
+            document.getElementById("result").innerHTML = null;
+        }
+        
+        
+    }
+    fetchingdata();
+    // filter code start
+    let upper = document.createElement("div");
+    upper.setAttribute("id","upper");
+
+        let click_data_sep = document.createElement("div");
+        click_data_sep.setAttribute("id","click_data_sep");
+
+            let heading_icon_sep = document.createElement("div");
+            heading_icon_sep.setAttribute("id","click_data_sep");
+                let h3 = document.createElement("h3");
+                h3.setAttribute("id","filter_para");
+                h3.innerText = "FILTER BY";
+
+                let icon_box = document.createElement("div");
+                icon_box.setAttribute("id","icon_box");
+                //     let icon_img = document.createElement("img");
+                //     img.setAttribute("src","abc");
+                //     img.setAttribute("alt","icon");
+                // icon_box.append(icon_img);
+            heading_icon_sep.append(h3,icon_box);
+
+            let click_desc_div = document.createElement("div");
+            click_desc_div.setAttribute("id","click_desc_div");
+
+        click_data_sep.append(heading_icon_sep,click_desc_div);
+    upper.append(click_data_sep);
+
+    document.getElementById("filter").append(upper);
+            
+        
+
+</script>
