@@ -57,7 +57,7 @@ padding: 0 20px 0 20px;
 display: none;
 position: absolute;
 background-color: rgb(255,255,255);
-border: 2px solid black;
+/* border: 2px solid black; */
 height: 355px;
 width: 1260px; 
 /* padding: 50% 100% 10% 100%; */
