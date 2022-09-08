@@ -37,6 +37,7 @@ var currPro=[{
     "img_3": "https://www.rodanandfields.com/en-us/medias/ENHLSH01-PDP-lifestyle-1168x1168-MOBILE.jpg?context=bWFzdGVyfGltYWdlc3w3NTIxNnxpbWFnZS9qcGVnfGltYWdlcy9oYzUvaDMxLzg4MjE4Nzg5MTUxMDIuanBnfDI2MDVlY2NlZDcxNzIxN2MzM2JiZWEwZTFkYTdjYzljYWVhMGNkODlhOTk2Y2Y0NDdhOTdlZjkyZjdiZDhiMzQ"
   }]
 currPro=currPro[currPro.length-1];
+document.getElementById("g_title").innerHTML=`${currPro.title} | Rodan + Fields®`
 const showProduct=()=>{
     var content=document.getElementById("g_mainContainer");
     content.innerHTML=""
