@@ -63,8 +63,9 @@ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 z-index: 1;
 /* text-align: center; */
 top: 35px;
-overflow-y: auto;
-overflow-x: auto;
+/* overflow-y: auto; */
+/* overflow-x: auto; */
+overflow: hidden;
 
 }
 
