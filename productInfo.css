@@ -171,10 +171,12 @@
         object-fit: contain;
     }
     #g_add{
-        position: sticky;
-        bottom: 5px;
+        width: 95%;
+        position: fixed;
+        bottom: 20px;
         right: 10px;
         left: 10px;
+        padding: 15px 0;
     }
     #g_proHead{
         display: none;
