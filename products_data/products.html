@@ -186,14 +186,18 @@
             text-decoration: none solid rgb(33, 33, 33);
             text-transform: uppercase;
         }
-        .drop_icon_div{
+        input[type="checkbox"]{
+            display: none;
+        }
+        <!-- .drop_icon_div{
             height: 25px;
             width: 25px;
         }
         .drop_icon_div>img{
             width: 100%;
             height: 100%;
-        }
+        } -->
+
     </style>
 </head>
 <body>
@@ -348,10 +352,28 @@
                 h4_1.innerText = "Category";
                 let drop_icon_div1 = document.createElement("div");
                 drop_icon_div1.setAttribute("class","drop_icon_div");
-                    let drop_icon1 = document.createElement("img");
-                    drop_icon1.setAttribute("src","svg_image/expand_more.svg.svg");
-                    drop_icon1.setAttribute("alt","icon");
-                drop_icon_div1.append(drop_icon1);
+                // drop_icon_div1.style.display = "flex";
+                    // let drop_icon1 = document.createElement("img");
+                    // drop_icon1.setAttribute("src","svg_image/expand_more.svg.svg");
+                    // drop_icon1.setAttribute("alt","icon");
+                    var drop_icon1 = document.createElement("input");
+                    drop_icon1.setAttribute("type","checkbox");
+                    drop_icon1.setAttribute("id","check");
+                    var lab1 = document.createElement("label");
+                    lab1.setAttribute("for","check");
+                    lab1.innerHTML = "<img src='svg_image/expand_more.svg.svg' width='25px' height='25px'>";
+                    drop_icon1.addEventListener("change",function(){
+                        change_bg();
+                    })
+                    function change_bg(){
+                        if(drop_icon1.checked){
+                            lab1.innerHTML = "<img src='svg_image/expand_less.svg.svg' width='25px' height='25px'>";
+                        }
+                        else{
+                            lab1.innerHTML ="<img src='svg_image/expand_more.svg.svg' width='25px' height='25px'>";
+                        }
+                    }
+                drop_icon_div1.append(drop_icon1,lab1);
                 drop_icon_div1.addEventListener("click",function(){
                     dispaly_heading1_filter();
                 });
@@ -367,10 +389,27 @@
                 h4_2.innerText = "SKIN CONCERN";
                 let drop_icon_div2 = document.createElement("div");
                 drop_icon_div2.setAttribute("class","drop_icon_div");
-                    let drop_icon2 = document.createElement("img");
-                    drop_icon2.setAttribute("src","svg_image/expand_more.svg.svg");
-                    drop_icon2.setAttribute("alt","icon");
-                drop_icon_div2.append(drop_icon2);
+                    // let drop_icon2 = document.createElement("img");
+                    // drop_icon2.setAttribute("src","svg_image/expand_more.svg.svg");
+                    // drop_icon2.setAttribute("alt","icon");
+                     var drop_icon2 = document.createElement("input");
+                    drop_icon2.setAttribute("type","checkbox");
+                    drop_icon2.setAttribute("id","check2");
+                    var lab2 = document.createElement("label");
+                    lab2.setAttribute("for","check2");
+                    lab2.innerHTML = "<img src='svg_image/expand_more.svg.svg' width='25px' height='25px'>";
+                    drop_icon2.addEventListener("change",function(){
+                        change_bg2();
+                    })
+                    function change_bg2(){
+                        if(drop_icon2.checked){
+                            lab2.innerHTML = "<img src='svg_image/expand_less.svg.svg' width='25px' height='25px'>";
+                        }
+                        else{
+                            lab2.innerHTML ="<img src='svg_image/expand_more.svg.svg' width='25px' height='25px'>";
+                        }
+                    }
+                drop_icon_div2.append(drop_icon2,lab2);
                 drop_icon_div2.addEventListener("click",function(){
                     dispaly_heading2_filter();
                 });
@@ -386,10 +425,27 @@
                 h4_3.innerText = "APPLICATION AREA";
                 let drop_icon_div3 = document.createElement("div");
                 drop_icon_div3.setAttribute("class","drop_icon_div");
-                    let drop_icon3 = document.createElement("img");
-                    drop_icon3.setAttribute("src","svg_image/expand_more.svg.svg");
-                    drop_icon3.setAttribute("alt","icon");
-                drop_icon_div3.append(drop_icon3);
+                    // let drop_icon3 = document.createElement("img");
+                    // drop_icon3.setAttribute("src","svg_image/expand_more.svg.svg");
+                    // drop_icon3.setAttribute("alt","icon");
+                    var drop_icon3 = document.createElement("input");
+                    drop_icon3.setAttribute("type","checkbox");
+                    drop_icon3.setAttribute("id","check3");
+                    var lab3 = document.createElement("label");
+                    lab3.setAttribute("for","check3");
+                    lab3.innerHTML = "<img src='svg_image/expand_more.svg.svg' width='25px' height='25px'>";
+                    drop_icon3.addEventListener("change",function(){
+                        change_bg3();
+                    })
+                    function change_bg3(){
+                        if(drop_icon3.checked){
+                            lab3.innerHTML = "<img src='svg_image/expand_less.svg.svg' width='25px' height='25px'>";
+                        }
+                        else{
+                            lab3.innerHTML ="<img src='svg_image/expand_more.svg.svg' width='25px' height='25px'>";
+                        }
+                    }
+                drop_icon_div3.append(drop_icon3,lab3);
                 drop_icon_div3.addEventListener("click",function(){
                     dispaly_heading3_filter();
                 });
@@ -405,10 +461,27 @@
                 h4_4.innerText = "PRODUCT LINE";
                 let drop_icon_div4 = document.createElement("div");
                 drop_icon_div4.setAttribute("class","drop_icon_div");
-                    let drop_icon4 = document.createElement("img");
-                    drop_icon4.setAttribute("src","svg_image/expand_more.svg.svg");
-                    drop_icon4.setAttribute("alt","icon");
-                drop_icon_div4.append(drop_icon4);
+                    // let drop_icon4 = document.createElement("img");
+                    // drop_icon4.setAttribute("src","svg_image/expand_more.svg.svg");
+                    // drop_icon4.setAttribute("alt","icon");
+                    var drop_icon4 = document.createElement("input");
+                    drop_icon4.setAttribute("type","checkbox");
+                    drop_icon4.setAttribute("id","check4");
+                    var lab4 = document.createElement("label");
+                    lab4.setAttribute("for","check4");
+                    lab4.innerHTML = "<img src='svg_image/expand_more.svg.svg' width='25px' height='25px'>";
+                    drop_icon4.addEventListener("change",function(){
+                        change_bg4();
+                    })
+                    function change_bg4(){
+                        if(drop_icon4.checked){
+                            lab4.innerHTML = "<img src='svg_image/expand_less.svg.svg' width='25px' height='25px'>";
+                        }
+                        else{
+                            lab4.innerHTML ="<img src='svg_image/expand_more.svg.svg' width='25px' height='25px'>";
+                        }
+                    }
+                drop_icon_div4.append(drop_icon4,lab4);
                 drop_icon_div4.addEventListener("click",function(){
                     dispaly_heading4_filter();
                 });
@@ -418,7 +491,11 @@
         fourth_filter.append(heading4,display_filter4);
     lower.append(first_filter,second_filter,third_filter,fourth_filter);
     document.getElementById("filter").append(lower);
+   
+    //display first filter list function
+    // function display dispaly_heading1_filter(){
 
+    // }
 
                
 
