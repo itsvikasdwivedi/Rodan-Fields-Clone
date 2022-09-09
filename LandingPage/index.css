@@ -624,7 +624,12 @@ div::-webkit-scrollbar-thumb {background-color:#545353;border-radius:10px;} */
         }
 
 
-
+        button{
+           cursor: pointer;
+        }
+        button:hover{
+            background-color: #9d9696;
+        }
       
 
         @media only screen and (min-width:481px) and (max-width: 973px) {
