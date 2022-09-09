@@ -14,14 +14,17 @@
 
         #MainContent {
             display: flex;
-            align-items: center;
+            
             justify-content: space-between;
+            background-color: #f7f2ee;
         }
 
         #MainContentTileDiv {
             /* border: 2px solid saddlebrown; */
             margin-left: 4%;
             margin-right: 1%;
+            
+            
 
 
 
@@ -33,10 +36,11 @@
         #MainContentTileDiv>h2 {
 
             color: rgb(34, 34, 34);
-            font-size: 32px;
+            font-size: 44px;
             font-weight: 300;
             font-family: 'Gideon Roman', cursive;
             margin-bottom: 40px;
+            padding-right: 50px;
         }
 
 
@@ -46,20 +50,26 @@
             font-size: 18px;
 
             font-style: normal;
-            padding-right: 50px;
+            padding-right: 20px;
             font-weight: 500;
             margin-bottom: 40px;
+            line-height: 25px;
+            word-spacing: 2px;
+            padding-right: 50px;
 
         }
 
         #MainContentTileDiv p:nth-child(3),
         a {
             font-size: 13px;
-            margin-bottom: 40px;
+            margin-top: -20px;
+            margin-bottom: 50px;
             font-family: helvetica;
             font-weight: 100;
 
             color: rgb(52, 51, 51);
+            line-height: 20px;
+            padding-right: 50px;
         }
 
         #lapImage {
@@ -76,7 +86,7 @@
 
         #MainContentTileDiv button {
             width: 82%;
-            padding: 10px;
+            padding: 8px;
             background-color: white;
             border-radius: 5px;
             font-size: larger;
@@ -329,8 +339,19 @@ div::-webkit-scrollbar-thumb {background-color:#545353;border-radius:10px;} */
             margin-top: 40px;
             margin-bottom: 40px;
 
-
+            
             font-family: Arial, Helvetica, sans-serif;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* number of lines to show */
+                    line-clamp: 2; 
+            -webkit-box-orient: vertical;
+            
+         
+        }
+        #girlProductItem p span{
+            visibility: hidden;
         }
 
         #girlProductItem a {
@@ -403,6 +424,7 @@ div::-webkit-scrollbar-thumb {background-color:#545353;border-radius:10px;} */
        }
        #botomItemParent>div img{
         border-radius: 2px 2px 2px 2px;
+        max-height: 300px;
        }
 
        /* courlosol for botom */
@@ -624,8 +646,24 @@ div::-webkit-scrollbar-thumb {background-color:#545353;border-radius:10px;} */
         }
 
 
-
-      
+        button{
+           cursor: pointer;
+        }
+        button:hover{
+            background-color: #9d9696;
+        }
+         #bestSeller{
+            text-align: right;
+            text-decoration: underline;
+            font-size: large;
+            line-height: 8px;
+            padding-right: 30px;
+            
+            
+            
+         }
+       
+        
 
         @media only screen and (min-width:481px) and (max-width: 973px) {
 
@@ -646,6 +684,10 @@ div::-webkit-scrollbar-thumb {background-color:#545353;border-radius:10px;} */
                 text-align: center;
                 padding-left: 0px;
                 padding-right: 0px;
+                background-color: white;
+            }
+            #bestSeller{
+                display: none;
             }
 
             #MainContentTileDiv p:nth-child(2) {
@@ -676,7 +718,7 @@ div::-webkit-scrollbar-thumb {background-color:#545353;border-radius:10px;} */
                 background-color: white;
                 border-radius: 5px;
                 font-size: larger;
-
+                margin-bottom: 100px;
 
             }
 
@@ -808,7 +850,7 @@ div::-webkit-scrollbar-thumb {background-color:#545353;border-radius:10px;} */
                 max-height: 400px;
                 width: 100%;
                 margin-bottom: 10px;
-                content: url("https://www.rodanandfields.com/en-us/medias/BMSM-HP-US-Mobile-02-no-ITFG.gif?context=bWFzdGVyfHJvb3R8NDAwNDkwfGltYWdlL2dpZnxoNzcvaDNiLzE1NTQ3NTE2NzQ3ODA2LmdpZnwzNWMxN2YzMmM0ZDZlYWJlYjE5YTAwMjJhZWU4NjkwMTIzM2EzMWYyNzlmZWI1MzRhYjI1MmZiZjM3NzYwMjg0");
+                content: url("../LandingPage/image/homeImage.jpg");
             }
 
             #MainContent {
@@ -817,6 +859,11 @@ div::-webkit-scrollbar-thumb {background-color:#545353;border-radius:10px;} */
                 text-align: center;
                 padding-left: 0px;
                 padding-right: 0px;
+                background-color: white;
+                
+            }
+            #bestSeller{
+                display: none;
             }
 
             #MainContentTileDiv p:nth-child(2) {
@@ -856,7 +903,9 @@ div::-webkit-scrollbar-thumb {background-color:#545353;border-radius:10px;} */
                 background-color: white;
                 border-radius: 5px;
                 font-size: larger;
-
+               
+                margin-bottom: 70px;
+                margin-right: 50px;
 
             }
 
@@ -882,6 +931,98 @@ div::-webkit-scrollbar-thumb {background-color:#545353;border-radius:10px;} */
             margin: 10px;
        
        }
+
+       #girlProductItem {
+         
+        height: auto;
+        display: flex;
+        /* align-items: center;
+        justify-content: space-between;
+        border-radius: 5px;
+        
+
+        background-color: #f4efe7; */
+        flex-direction: column-reverse;
+       
+
+
+    }
+
+    /* #girlProductItem>div {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 30px;
+
+
+
+
+    }
+
+    #girlProductItem>div h1 {
+       margin-top: 40px;
+        font-size: 25px;
+        font-weight: 200px;
+        font-family: 'Gideon Roman', cursive;
+
+
+     margin-bottom: -30px;
+
+    }
+
+  
+
+    #girlProductItem p {
+        font-size: medium;
+        line-height: 30px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #girlProductItem a {
+     font-size: large;
+     margin-bottom: -30px;
+    } */
+
+    #girlProductItem img {
+       
+       
+       
+      
+       
+        width: 100%;
+        height: 60%;
+        
+        
+         
+         border-radius: 5px 5px 5px 5px;
+ 
+ 
+ 
+     }
+     #girlPductdivparent .owl-stage   .active:first-child{
+        display: none;
+    }
+    #girlProductItem p {
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        
+        font-family: Arial, Helvetica, sans-serif;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* number of lines to show */
+                line-clamp: 2; 
+        -webkit-box-orient: vertical;
+        
+     
+    }
+
+        
 
         }
   
