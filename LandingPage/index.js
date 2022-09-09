@@ -1,12 +1,21 @@
+import{footer} from "../footer.js"
+import{navbar} from "../navbar.js"
+navbar();
+footer();
 
 shoProduct();
-
+document.getElementById("showP").addEventListener("click",()=>{
+   window.location.href="../products_data/products.html"
+})
+document.getElementById("showAllDerma").addEventListener("click",()=>{
+   window.location.href="../products_data/products.html"
+})
 let data;
 let result;
 async function shoProduct(){
 
     try{
-          data = await fetch("http://localhost:5501/product");
+          data = await fetch("http://localhost:3786/product");
           result = await data.json();
          
     //      document.getElementById("ProductParent").innerHTML="";

@@ -260,6 +260,9 @@ input[id^="check"]{
         font-size: 12px;
         /* margin: 0; */
     }
+    #container{
+        width: 100%;
+    }
     .title,.info,.price{
         font-size: 12px;
     }
@@ -269,6 +272,7 @@ input[id^="check"]{
         margin: auto;
     }
     #filter{
+        /* display: none; */
         width: 40%;
         font-size: 10px;
         margin-left: 0;
@@ -280,11 +284,16 @@ input[id^="check"]{
         width: 60%;
     } */
     .card{
-        margin-left: auto;
-        margin-right: auto;
+        /* margin-left: auto;
+        margin-right: auto; */
+        width: 120%;
     }
     #result{
         display: block;
+    }
+    #section{
+        display: flex;
+        flex-direction: column;
     }
 }
 @media only screen and (min-width:600px) and (max-width: 839px){

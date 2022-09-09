@@ -5,7 +5,7 @@ navbar();
 
 
 const showProduct=async(id)=>{
-    var res = await fetch(`http://localhost:3000/product?Id=${id}`);
+    var res = await fetch(`http://localhost:3786/product?Id=${id}`);
     var res2 = await res.json();
     console.log(res2);
     document.getElementById("g_title").innerHTML=`${res2.title} | Rodan + Fields®`
