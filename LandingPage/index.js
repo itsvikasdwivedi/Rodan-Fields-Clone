@@ -187,3 +187,11 @@ function DermClickImage(value){
 document.getElementById("showAllDerma").addEventListener("click",()=>{
 
 })
+
+
+
+
+// home page bestseller ptag
+document.getElementById("bestSeller").addEventListener("click",()=>{
+    
+})
