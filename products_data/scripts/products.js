@@ -99,6 +99,12 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 addtobagbtn.setAttribute("id","addtobag");
                 addtobagbtn.innerText = "ADD To BAG"
             lower.append(addtobagbtn);
+            upper.addEventListener("click",function(){
+                card_pressing_func(element.Id);
+            })
+            addtobagbtn.addEventListener("click",function(){
+                button_pressing_func(element.Id);
+            })
             card.append(upper,lower);
             document.getElementById("products").append(card);
 
@@ -756,7 +762,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
         document.getElementById("products").innerHTML= null;
         document.getElementById("result").innerHTML = null;
         let res = await fetch(`http://localhost:3786/products`);
-        let obj = await res.json();
+        var obj = await res.json();
         console.log(obj);
         var filters = JSON.parse(localStorage.getItem("filter_key")) || [];
         if(filters.length==0){
@@ -764,85 +770,116 @@ localStorage.setItem("filter_key",JSON.stringify([]));
         }
         else{
         //filter
-        const filteredArray = obj.filter(ele => {
-            let result = false;
-            for(let key of filters){
-                var d = key[0];    
-                var e = key[1];
-                if (ele[e] == d){
-                    result = true;
-                    break;
-                }
-            }
-            return result;  
-        });
-        console.log("filtered",filteredArray);
-        filteredArray.forEach((element,index) => {
-            let card = document.createElement("div");
-            card.setAttribute("class","card");
-
-            let upper = document.createElement("div");
-            upper.setAttribute("class","upper");
-                let img_div =  document.createElement("div");
-                img_div.setAttribute("class","img-div");
-                    let image = document.createElement("img");
-                    image.setAttribute("src",element.image);
-                    image.setAttribute("alt",index);
-                img_div.append(image);
-
-                let sts = document.createElement("div");
-                sts.setAttribute("class","status");
-                sts.innerText = element.status;
-
-                let ttl = document.createElement("div");
-                ttl.setAttribute("class","title");
-                ttl.innerText = element.title;
-
-                let ifo = document.createElement("div");
-                ifo.setAttribute("class","info");
-                ifo.innerText = element.info;
-
-                let prc = document.createElement("div");
-                prc.setAttribute("class","price");
-                prc.innerText = "$"+element.price;
-
-                var rating_wrapper = document.createElement("div");
-                rating_wrapper.setAttribute("class","rating-wrapper");
-
-                    let rtgstar = document.createElement("div");
-                    rtgstar.setAttribute("class","rating-star");
-                    if(element.rating==""){
-                        rating_wrapper.style.display = "none";
+            const filteredArray = obj.filter(ele => {
+                var result = false;
+                for(var key of filters){
+                    var d = key[0];    
+                    var e = key[1];
+                    
+                    if (ele[e] == d){
+                        console.log("ele",ele[e]);
+                        result = true;
+                        // break;
                     }
-                    else{
-                        if(Number(element.rating)<3.5){
-                            rtgstar.innerHTML = three_star;
-                        }
-                        else if(Number(element.rating)<4){
-                            rtgstar.innerHTML = four_star;
+                }
+                // for(var i=0;i<filters.length;i++){
+                //     var a = filters[i][0];
+                //     var b = filter[i][1];
+                //     if(ele[`${b}`] ==a){
+
+                //     }
+
+                
+                // }
+                return result;  
+            });
+            console.log("filtered",filteredArray);
+            filteredArray.forEach((element,index) => {
+                let card = document.createElement("div");
+                card.setAttribute("class","card");
+
+                let upper = document.createElement("div");
+                upper.setAttribute("class","upper");
+                    let img_div =  document.createElement("div");
+                    img_div.setAttribute("class","img-div");
+                        let image = document.createElement("img");
+                        image.setAttribute("src",element.image);
+                        image.setAttribute("alt",index);
+                    img_div.append(image);
+
+                    let sts = document.createElement("div");
+                    sts.setAttribute("class","status");
+                    sts.innerText = element.status;
+
+                    let ttl = document.createElement("div");
+                    ttl.setAttribute("class","title");
+                    ttl.innerText = element.title;
+
+                    let ifo = document.createElement("div");
+                    ifo.setAttribute("class","info");
+                    ifo.innerText = element.info;
+
+                    let prc = document.createElement("div");
+                    prc.setAttribute("class","price");
+                    prc.innerText = "$"+element.price;
+
+                    var rating_wrapper = document.createElement("div");
+                    rating_wrapper.setAttribute("class","rating-wrapper");
+
+                        let rtgstar = document.createElement("div");
+                        rtgstar.setAttribute("class","rating-star");
+                        if(element.rating==""){
+                            rating_wrapper.style.display = "none";
                         }
                         else{
-                            rtgstar.innerHTML = five_star;
+                            if(Number(element.rating)<3.5){
+                                rtgstar.innerHTML = three_star;
+                            }
+                            else if(Number(element.rating)<4){
+                                rtgstar.innerHTML = four_star;
+                            }
+                            else{
+                                rtgstar.innerHTML = five_star;
+                            }
+                            
                         }
-                        
-                    }
-                    let rtg = document.createElement("div");
-                    rtg.setAttribute("class","rating");
-                    rtg.innerText = element.rating;
+                        let rtg = document.createElement("div");
+                        rtg.setAttribute("class","rating");
+                        rtg.innerText = element.rating;
 
-                    let vt = document.createElement("div");
-                    vt.setAttribute("class","votes");
-                    vt.innerText = element.rating_votes;
-                rating_wrapper.append(rtgstar,rtg,vt);
-            upper.append(img_div,sts,ttl,ifo,prc,rating_wrapper);
-            card.append(upper);
-            document.getElementById("products").append(card);
+                        let vt = document.createElement("div");
+                        vt.setAttribute("class","votes");
+                        vt.innerText = element.rating_votes;
+                    rating_wrapper.append(rtgstar,rtg,vt);
+                upper.append(img_div,sts,ttl,ifo,prc,rating_wrapper);
+                let lower = document.createElement("div");
+                lower.setAttribute("class","lower");
+                    let addtobagbtn = document.createElement("button");
+                    addtobagbtn.setAttribute("id","addtobag");
+                    addtobagbtn.innerText = "ADD To BAG"
+                lower.append(addtobagbtn);
+                card.append(upper,lower);
+                upper.addEventListener("click",function(){
+                    card_pressing_func(element.Id);
+                })
+                addtobagbtn.addEventListener("click",function(){
+                    button_pressing_func(element.Id);
+                })
+                document.getElementById("products").append(card);
 
-        });
-        //total reaults filter
-        let resultdata = document.createElement("div");
-        resultdata.innerText = "Showing " +`${filteredArray.length}`+ " Results";
-        document.getElementById("result").append(resultdata);
+            });
+            //total reaults filter
+            let resultdata = document.createElement("div");
+            resultdata.innerText = "Showing " +`${filteredArray.length}`+ " Results";
+            document.getElementById("result").append(resultdata);
 
-    }   
-    }
+        }   
+}
+function card_pressing_func(id){
+    localStorage.setItem("card-press-data",id);
+}
+function button_pressing_func(id){
+    var get_button_pressing = JSON.parse(localStorage.getItem("button-press-data")) || [];
+    get_button_pressing.push(id);
+    localStorage.setItem("button-press-data",JSON.stringify(get_button_pressing));
+}
