@@ -1,47 +1,17 @@
-import {footer} from "../footer.js";
+import {footer} from "./footer.js";
+import { navbar } from "./navbar.js";
 footer();
-var currPro=[{
-    "Id": 1,
-    "title": "R+F Instant Targeted Firming Gel™",
-    "image": "https://www.rodanandfields.com/en-us/medias/ENG010-What-sIncluded-570x570.png?context=bWFzdGVyfGltYWdlc3wxODU2NXxpbWFnZS9wbmd8aW1hZ2VzL2g5YS9oNjUvMTQ5NjkwODY1NDE4NTQucG5nfGNlNDBkMDdkYzlkMDFmZDQ1MDg4ZDFmMDA0MmUzYzc2NjgwNmQ3ZDgxNWExYmY3YWRmYzcwYzYyOWY3NTkyZmQ",
-    "status": "New Arrival",
-    "info": "Multi-targeted skincare treatment that instantly and visibly firms, tightens + smooths.",
-    "price": 105,
-    "rating": "",
-    "rating_votes": "",
-    "perk_price": 95,
-    "category": "Face Serums",
-    "application_area": "Face",
-    "skin_concern": "Fine Lines & Wrinkles",
-    "product_line": "Redefine",
-    "img_1": "https://www.rodanandfields.com/en-us/medias/ENFG010-900X900-MOBILE.jpg?context=bWFzdGVyfGltYWdlc3wyMzM5OHxpbWFnZS9qcGVnfGltYWdlcy9oZjAvaDMwLzE0OTY5MDg2NjQwMTU4LmpwZ3w2MDM5ODk3MDQwYzQ5ZTRjNzQ3OTBlN2E4ZmYwMGM3ZDlkYWVmNDBmMTc5ZmY3ZGE0ZWRlZTdjNmFiZTJjMTc1",
-    "img_2": "",
-    "img_3": "https://www.rodanandfields.com/en-us/medias/ENFG010-ITFG-Texture1-570x570.jpg?context=bWFzdGVyfHJvb3R8ODE2N3xpbWFnZS9qcGVnfGhkOS9oMzcvMTQ5NjkwODcxNjQ0NDYuanBnfGJlODFiNDMzNGJmODAwOTJkZWQwY2ExNWMzMjJiMzU0Mjc2ZjNhNjE4NjdjZDg4MmNkZTNjYzE3MjZjZmM1MDk",
-    "img_4": "https://www.rodanandfields.com/en-us/medias/ENFGR10-ITFG-Refill-GIF-570x570.gif?context=bWFzdGVyfHJvb3R8NDAyNTkwfGltYWdlL2dpZnxoMjEvaDA1LzE0OTY5MDg3NTU3NjYyLmdpZnw4NTNlNDQ4NWZiYzdhMjkwNzQ0MDUzNTA5OGI5Nzg3MjVlN2NlYjI1MzdhYTNhNGE5MjJjZTI1MTlkMjU4NDVj"
-},{
-    "Id": 3,
-    "title": "R + F Lash Boost",
-    "image": "https://www.rodanandfields.com/en-us/medias/ENHLSH01-Regimen-Explainer-R-F-Lash-Boost-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wxMDc0OHxpbWFnZS9wbmd8aW1hZ2VzL2hmMS9oYWMvMTQ1MzIwNDI1ODgxOTAucG5nfDQyNTQ0OGUzYmMwZTJkM2YzNzE1MjE2NzQ1M2YxMWQ5M2E3ZWQ2MjAwMDA3MzFmNjQyOWUwNDU3OWZmMTkzZDY",
-    "status": "Best Seller",
-    "info": "Applied nightly to promote the appearance of longer, stronger and darker-looking lashes.",
-    "price": 155,
-    "rating": "4.6",
-    "rating_votes": "(8276)",
-    "perk_price": 140,
-    "category": "Face Serums",
-    "application_area": "Eyelashes ",
-    "skin_concern": "Fine Lines & Wrinkles",
-    "product_line": "Redefine",
-    "img_1": "https://www.rodanandfields.com/en-us/medias/ENHLSH01-detail.jpg?context=bWFzdGVyfGltYWdlc3wzMjIzMHxpbWFnZS9qcGVnfGltYWdlcy9oOGEvaGRiLzg4MjE4NjAyMDQ1NzQuanBnfDI5N2MzYWVlOTg4NjBhYzJiYzk0ZTY2ODU0YTk1OGY1NTFmMWFjMjIxMTRjNzUwNmUyZTJlM2JmMzhiZDIzZDU",
-    "img_2": "https://www.rodanandfields.com/en-us/medias/ENHLSH01-Lash-Carousel-51x51.jpg?context=bWFzdGVyfGltYWdlc3wzMTQyfGltYWdlL2pwZWd8aW1hZ2VzL2hmNi9oM2UvMTUzOTU0MTQ5MzM1MzQuanBnfDRmMjZhNzczNjc0NjYzZjkyMDhhMDBiODgwNzMxYzBiYTcxMjg3MDY2YmFmODdlMTliYTk5NzBkZTcxN2UzMDQ",
-    "img_3": "https://www.rodanandfields.com/en-us/medias/ENHLSH01-PDP-lifestyle-1168x1168-MOBILE.jpg?context=bWFzdGVyfGltYWdlc3w3NTIxNnxpbWFnZS9qcGVnfGltYWdlcy9oYzUvaDMxLzg4MjE4Nzg5MTUxMDIuanBnfDI2MDVlY2NlZDcxNzIxN2MzM2JiZWEwZTFkYTdjYzljYWVhMGNkODlhOTk2Y2Y0NDdhOTdlZjkyZjdiZDhiMzQ"
-  }]
-currPro=currPro[currPro.length-1];
-document.getElementById("g_title").innerHTML=`${currPro.title} | Rodan + Fields®`
-const showProduct=()=>{
+navbar();
+
+
+const showProduct=async(id)=>{
+    var res = await fetch(`http://localhost:3000/product?Id=${id}`);
+    var res2 = await res.json();
+    console.log(res2);
+    document.getElementById("g_title").innerHTML=`${res2.title} | Rodan + Fields®`
     var content=document.getElementById("g_mainContainer");
     content.innerHTML=""
-    var el=currPro;
+    var el=res2[0];
     // currPro.map(el=>{
         document.getElementById("g_proHead").innerHTML=`
         Home | All Products | ${el.title}
@@ -218,6 +188,6 @@ const showProduct=()=>{
     document.getElementById("gd1show").classList.toggle("show")
     })
 }
-            
-window.addEventListener("load",showProduct);
+    var id =5;        
+window.addEventListener("load",()=>{showProduct(localStorage.getItem("card-press-data"))});
 
