@@ -1,0 +1,887 @@
+
+        @font-face {
+            font-family: helvetica;
+            src: url(../rodanandfields/font/HelveticaNeue.otf);
+
+        }
+        body{
+            margin: 0px;
+        }
+        @font-face {
+            font-family: nova;
+            src: url(../rodanandfields/font/FontsFree-Net-ProximaNova-Regular.ttf);
+        }
+
+        #MainContent {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #MainContentTileDiv {
+            /* border: 2px solid saddlebrown; */
+            margin-left: 4%;
+            margin-right: 1%;
+
+
+
+
+
+        }
+
+
+        #MainContentTileDiv>h2 {
+
+            color: rgb(34, 34, 34);
+            font-size: 32px;
+            font-weight: 300;
+            font-family: 'Gideon Roman', cursive;
+            margin-bottom: 40px;
+        }
+
+
+        #MainContentTileDiv p:nth-child(2) {
+
+            font-family: helvetica;
+            font-size: 18px;
+
+            font-style: normal;
+            padding-right: 50px;
+            font-weight: 500;
+            margin-bottom: 40px;
+
+        }
+
+        #MainContentTileDiv p:nth-child(3),
+        a {
+            font-size: 13px;
+            margin-bottom: 40px;
+            font-family: helvetica;
+            font-weight: 100;
+
+            color: rgb(52, 51, 51);
+        }
+
+        #lapImage {
+
+
+            max-height: 650px;
+            width: 68%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+
+
+
+        }
+
+        #MainContentTileDiv button {
+            width: 82%;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            font-size: larger;
+
+
+        }
+
+        #tabImage {
+            display: none;
+        }
+
+        /* Derm-Designed  partD */
+
+        #DermDiv {
+            background-color: #f8f4f2;
+            padding-top: 68px;
+            padding-bottom: 90px;
+            text-align: center;
+            
+
+        }
+        #DermDiv h3{
+            
+            overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;
+
+        }
+
+        #DermDiv>button {
+            width: 400px;
+            border-radius: 5px;
+            padding: 17px;
+            background-color: #f8f4f2;
+            font-size: medium;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+
+        }
+
+        #DermDiv>button:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        #DermDiv h1 {
+
+            color: rgb(34, 34, 34);
+
+            font-family: 'Gideon Roman', cursive;
+            font-weight: 400;
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 35px;
+
+
+
+
+        }
+
+        #DermIteam {
+            display: grid;
+            grid-template-columns: repeat(6, 6fr);
+            gap: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: #f8f4f2;
+        }
+
+        #DermIteam>div {
+            margin-top: 40px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            border-radius: 8px;
+            color: #737272;
+            text-align: center;
+            padding-bottom: 20px;
+            background-color: white;
+
+        }
+
+        #DermIteam>div img {
+            margin-bottom: 10px;
+            width: 100%;
+            height: 220px;
+            border-radius: 8px 8px 0px 0px;
+        }
+
+        #DermIteam>div img:hover {
+           
+            border-radius: 8px 8px 8px 8px;
+            cursor: pointer;
+        }
+
+
+        /* Doctor part */
+        #doctorDiv {
+            /* display: flex;
+           
+            gap: 130px;
+            
+            padding-top: 80px;
+            padding-bottom: 80px;
+            background-color: #f8f8f8;
+            overflow-x: auto;
+    white-space: nowrap; */
+            background-color: #f8f8f8;
+            padding-top: 80px;
+            padding-bottom: 50px;
+
+
+
+
+        }
+
+        #doctorItem {
+
+            text-align: center;
+
+            padding-left: 20px;
+            padding-right: 20px;
+
+
+
+        }
+
+
+
+
+
+
+        #doctorItem img {
+            width: 100%;
+            /* ProximaNovaRegular, */
+            border-radius: 3px 3px 3px 3px;
+        }
+
+        #doctorItem h1 {
+            font-family: nova;
+            font-weight: 500;
+            font-size: 28px;
+            color: black;
+
+
+        }
+
+        #doctorItem>div {
+            /* font-family: nova; */
+
+            font-size: 20px;
+            font-stretch: extra-expanded;
+            margin-bottom: 20px;
+            line-height: 30px;
+            text-align: center;
+
+
+        }
+
+        #doctorItem>a {
+            font-size: larger;
+            font-family: nova;
+            font-weight: 400;
+
+        }
+
+        /* #doctorDiv  .owl-stage{
+            background-color: #f8f8f8;
+    padding-top: 70px;
+    padding-bottom: 70px;
+        } */
+
+
+
+        /* div ::-webkit-scrollbar       {background-color:rgb(246, 246, 246);height:6px ;border-radius:10px;}
+div::-webkit-scrollbar-track {background-color:#DFDFDF;border-radius:10px}
+div::-webkit-scrollbar-thumb {background-color:#545353;border-radius:10px;} */
+
+
+
+
+        /* girl produc section */
+
+        #girlPductdivparent {
+           
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 40px;
+            padding-bottom: 50px;
+           
+        }
+
+        #girlProductItem {
+          
+            height: 370px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 5px;
+            
+
+            background-color: #f4efe7;
+           
+
+
+        }
+
+        #girlProductItem>div {
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-bottom: 50px;
+
+
+
+
+        }
+
+        #girlProductItem>div h1 {
+
+            font-size: 45px;
+            font-weight: 400px;
+            font-family: 'Gideon Roman', cursive;
+
+
+
+
+        }
+
+        #girlProductItem img {
+           
+           
+           
+          
+           height: 100%;
+           width: 50%;
+           
+           
+            
+            border-radius: 5px 5px 5px 5px;
+
+
+
+        }
+
+        #girlProductItem p {
+            font-size: 20px;
+            line-height: 30px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #girlProductItem a {
+            font-size: 20px;
+            margin-bottom: 70px;
+
+        }
+
+
+        /* courosol part icon */
+
+
+
+        /* fff */
+
+        .owl-carousel .owl-nav span {
+            padding: 12px;
+            background-color: #eeeeee;
+            opacity: 0.5;
+
+        }
+
+        .owl-carousel {
+            position: relative;
+
+        }
+
+        .owl-next,
+        .owl-prev {
+            position: absolute;
+            top: 45%;
+
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+        }
+
+        .owl-next {
+            right: -30px;
+            display: flex;
+
+        }
+
+        .owl-prev {
+            left: -30px;
+            display: flex;
+        }
+
+
+
+
+        .owl-carousel .nav-btn {
+            position: sticky;
+        }
+
+        .owl-carousel .owl-prev.disabled,
+        .owl-carousel .owl-next.disabled {
+            pointer-events: none;
+            opacity: 0;
+        }
+
+       #botomItemParent>div span:nth-child(2){
+        position: absolute;
+        top: 12px;
+        right: 18px;
+        color: white;
+        display: none;
+
+         
+
+       }
+       #botomItemParent>div img{
+        border-radius: 2px 2px 2px 2px;
+       }
+
+       /* courlosol for botom */
+
+       #botomItemParent .owl-nav  button  {
+           
+           
+            height: 108%;
+            background-color: white;
+            opacity: 0.5;
+            text-align: center;
+            width: 60px;
+            
+
+
+                        
+            
+
+
+        }
+        #botomItemParent .owl-nav  button span:hover{
+            color: #737272;
+        }
+        #botomItemParent .owl-nav  button span{
+        
+            width: 30px;
+           font-weight: bold;
+           font-size: 40px;
+           font-weight: 100;
+           color: #000000;
+           opacity: 1;
+           
+        }
+
+     
+
+       
+        #botomItemParent .owl-next {
+            right: -5px;
+            display: flex;
+            align-items: center;
+            padding-top: 20px;
+            
+            
+
+            
+
+        }
+
+        #botomItemParent .owl-prev {
+            left: -5px;
+            display: flex;
+            align-items: center;
+        }
+
+        #botomPartDiv h1{
+           font-weight: 300;
+           font-size: 23px;
+           margin-left: -5px;
+           color: #565555;
+           padding-left: 10px;
+           padding-top: 30px;
+           padding-bottom: 5px;
+        }
+
+
+        .owl-carousel .nav-btn {
+            position: sticky;
+        }
+
+        .owl-carousel .owl-prev.disabled,
+        .owl-carousel .owl-next.disabled {
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        /* Product  part */
+       #ProductParent{
+        background-color: #f8f4f2;
+        
+       
+       
+       }
+
+       #ProductParent .owl-dots{
+          background-color: #ffffff;
+          padding: 20px;
+       }
+        /* #TextDiv,#TextDiv>div,#TextDiv img{
+        display: none;
+       } */
+       
+       #TextDiv >div{
+        /* font-family: 'Gideon Roman', cursive;
+        font-size: 45px;
+        font-weight: 300;
+        color: black;
+        padding-left: 50px;
+        padding-right: 50px;
+        line-height:60px; */
+        /* border: 2px solid saddlebrown; */
+        padding-left: 50px;
+        padding-bottom: 50px;
+        padding-right: 60px;
+        z-index: 1;
+        position: relative;
+
+
+       }
+       #TextDiv >div h1{
+         font-family: 'Gideon Roman', cursive;
+        font-size: 45px;
+        font-weight: 300;
+        color: black;
+      
+        line-height:60px;
+
+       }
+       #TextDiv >div a{
+        font-size: larger;
+       font-weight: 300;
+        line-height: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+
+       }
+       #TextDiv  img{
+        height: 260px;
+        margin-top: -105px;
+        position: relative;
+        padding: 10px;
+        z-index: 0;
+
+       }
+       #ProductItem{
+        background-color: white;
+        padding: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+       }
+       #ProductItem h5{
+         position:absolute;
+         top: 50px;
+         right: 25px;
+         padding: 5px;
+         border: 1px solid rgb(212, 212, 212);
+         padding-left: 22px;
+         padding-right: 22px;
+         color: rgb(212, 212, 212);
+         font-weight: 200;
+         word-spacing: 3px;
+       }
+       #ProductItem img{
+        text-align: center;
+        margin: auto;
+          height: 49%;
+         width: 90%;
+         margin-bottom: -20px;
+            
+       } 
+       #ProductItem h3:nth-child(2){
+        overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 1; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;
+       }
+
+       #ProductItem p:nth-child(3){
+        margin-top: 30px;
+        margin-bottom: 30px;
+        overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;
+       }
+
+       #ProductItem p:nth-child(5){
+        margin-top: -15px;
+        font-size: smaller;
+
+       }
+       #ProductItem p:nth-child(6){
+
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+       }
+       #ProductItem p:nth-child(6)>span{
+        font-size: smaller;
+       }
+       #ProductItem p:nth-child(6)>span>span{
+        font-size: small;
+        color: #737272;
+       }
+       #ProductItem button{
+           width: 100%;
+           padding: 9px;
+           background-color: white;
+           border-radius: 5px;
+           margin-bottom: 25px;
+           font-size: larger;
+           margin-top: 10px;
+           box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+       }
+
+       #ProductParent  .owl-next {
+            right: -5px;
+            display: flex;
+
+        }
+
+        #ProductParent .owl-prev {
+            left: -5px;
+            display: flex;
+        }
+
+
+
+      
+
+        @media only screen and (min-width:481px) and (max-width: 973px) {
+
+            #lapImage {
+                display: none;
+            }
+
+            #tabImage {
+                display: block;
+                max-height: 400px;
+                width: 100%;
+                margin-bottom: 50px;
+            }
+
+            #MainContent {
+                margin: 0px;
+                display: block;
+                text-align: center;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            #MainContentTileDiv p:nth-child(2) {
+
+                font-family: helvetica;
+                font-size: 18px;
+
+                font-style: normal;
+
+                font-weight: 500;
+                margin-bottom: 40px;
+
+            }
+
+            #MainContentTileDiv p:nth-child(3),
+            a {
+                font-size: 13px;
+                margin-bottom: 40px;
+                font-family: helvetica;
+                font-weight: 100;
+
+                color: rgb(52, 51, 51);
+            }
+
+            #MainContentTileDiv button {
+                width: 70%;
+                padding: 10px;
+                background-color: white;
+                border-radius: 5px;
+                font-size: larger;
+
+
+            }
+
+            /* Derm digin */
+            #DermIteam {
+
+                grid-template-columns: repeat(3, 3fr);
+
+            }
+
+            #DermDiv>button {
+                width: 400px;
+
+
+            }
+
+            /* product page */
+            #TextDiv >div{
+                margin: 0px;
+                display: none;
+               
+                
+            }
+           
+            #ProductParent .owl-stage   .active:first-child{
+                display: none;
+            }
+            #ProductItem{
+       
+            margin: 10px;
+       
+       }
+        
+       
+       /* #girlPductdivparent {
+           
+           padding-left: 20px;
+           padding-right: 20px;
+           padding-top: 40px;
+           padding-bottom: 50px;
+          
+       } */
+
+       #girlProductItem {
+         
+           height: auto;
+           display: flex;
+           /* align-items: center;
+           justify-content: space-between;
+           border-radius: 5px;
+           
+
+           background-color: #f4efe7; */
+           flex-direction: column-reverse;
+          
+
+
+       }
+
+       #girlProductItem>div {
+           padding-left: 10px;
+           padding-right: 10px;
+           padding-bottom: 30px;
+
+
+
+
+       }
+
+       #girlProductItem>div h1 {
+          margin-top: 40px;
+           font-size: 25px;
+           font-weight: 200px;
+           font-family: 'Gideon Roman', cursive;
+
+
+        margin-bottom: -30px;
+
+       }
+
+       #girlProductItem img {
+          
+          
+          
+         
+          
+          width: 100%;
+          height: 60%;
+          
+          
+           
+           border-radius: 5px 5px 5px 5px;
+
+
+
+       }
+
+       #girlProductItem p {
+           font-size: medium;
+           line-height: 30px;
+           margin-top: 40px;
+           margin-bottom: 40px;
+
+
+           font-family: Arial, Helvetica, sans-serif;
+       }
+       #girlProductItem a {
+        font-size: large;
+        margin-bottom: -30px;
+       }
+
+           
+
+
+
+
+        }
+
+
+
+        @media only screen and (max-width: 480px) {
+
+            #lapImage {
+                display: none;
+            }
+
+            #tabImage {
+                display: block;
+                max-height: 400px;
+                width: 100%;
+                margin-bottom: 10px;
+                content: url("https://www.rodanandfields.com/en-us/medias/BMSM-HP-US-Mobile-02-no-ITFG.gif?context=bWFzdGVyfHJvb3R8NDAwNDkwfGltYWdlL2dpZnxoNzcvaDNiLzE1NTQ3NTE2NzQ3ODA2LmdpZnwzNWMxN2YzMmM0ZDZlYWJlYjE5YTAwMjJhZWU4NjkwMTIzM2EzMWYyNzlmZWI1MzRhYjI1MmZiZjM3NzYwMjg0");
+            }
+
+            #MainContent {
+                margin: 0px;
+                display: block;
+                text-align: center;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            #MainContentTileDiv p:nth-child(2) {
+
+                font-family: helvetica;
+                font-size: 18px;
+
+                font-style: normal;
+
+                font-weight: 500;
+                margin-bottom: 40px;
+
+            }
+
+            #MainContentTileDiv>h2 {
+
+                color: rgb(34, 34, 34);
+                font-size: 32px;
+                font-weight: 300;
+                font-family: 'Gideon Roman', cursive;
+                margin-bottom: 30px;
+            }
+
+            #MainContentTileDiv p:nth-child(3),
+            a {
+                font-size: 13px;
+                margin-bottom: 30px;
+                font-family: helvetica;
+                font-weight: 100;
+
+                color: rgb(52, 51, 51);
+            }
+
+            #MainContentTileDiv button {
+                width: 80%;
+                padding: 10px;
+                background-color: white;
+                border-radius: 5px;
+                font-size: larger;
+
+
+            }
+
+            #DermIteam {
+
+                grid-template-columns: repeat(2, 2fr);
+
+            }
+
+            #DermDiv>button {
+                width: 260px;
+
+
+            }
+
+           /* productPage */
+
+              .owl-stage   .active:first-child{
+                display: none;
+            }
+            #ProductItem{
+       
+            margin: 10px;
+       
+       }
+
+        }
+  
