@@ -1,0 +1,324 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#section{
+
+    display: flex;
+    margin: 40px 0 0 0;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    
+}
+#filter{
+    width: 20%;
+    /* border: 1px solid red; */
+}
+#products-sep{
+    padding-right: 5px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#products{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* gap: 10px; */
+    /* border: 1px solid blue; */
+}
+.card{
+    /* border: 1px solid green; */
+    font-size: 14px;
+    font-weight: 300;
+    /* line-height: 24px; */
+    text-decoration: none solid rgb(63, 63, 63);
+    word-spacing: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    width: 100%;
+    /* height: 474px; */
+    border: 1px solid transparent;
+}
+.card:hover{
+    cursor: pointer;
+    border: 1px solid rgba(151, 149, 149,0.5);
+    box-shadow: 3px 3px 3px rgba(151, 149, 149,0.5);
+    border-radius: 8px;
+}
+.img-div{
+    width: 229px;
+    height: 229px;
+    margin: auto;
+}
+.img-div>img{
+    width: 100%;
+    height: 100%;
+}
+.status{
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+    text-decoration: none solid rgb(124, 127, 136);
+    text-align: left;
+    word-spacing: 0;
+    color: #7C7F88;
+    height: 18px;
+    margin-left: 20px;
+    /* min-height: 18px; */
+    min-width: auto;
+    font-weight: 500;
+}
+.title,.info,.price{
+    /* font-family: ProximaNovaMedium, Arial,sans-serif; */
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    text-decoration: none solid rgb(34, 34, 34);
+    text-align: left;
+    word-spacing: 0;
+    color: #222222;
+    /* height: 24px; */
+    /* width: 310px; */
+    margin-left: 20px;
+    /* min-height: auto; */
+    min-width: auto;
+    font-weight: 500;
+}
+.info{
+    font-size: 14px;
+    line-height: 20.02px;
+    /* height: 40px; */
+    margin-left: 20px;
+    padding: 0 0 8px 0;
+    font-weight: 400;
+}
+.price{
+    font-weight: 500;
+    text-decoration: none solid rgb(63, 63, 63);
+    color: #3f3f3f;
+    margin-bottom: 20px;
+}
+.rating-wrapper{
+    display: flex;
+    margin: 0 0 20px 20px;
+    align-items: center;
+}
+.rating-wrapper>div{
+    margin-left: 5px;
+}
+.rating-wrapper>div:nth-child(1){
+    margin-left: 0;
+}
+.rating-wrapper>div:nth-child(2){
+   font-weight: 400;
+}
+.rating-wrapper>div:nth-child(3){
+    font-size: 11px;
+    font-weight: 500;
+}
+/* .rating-wrapper{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 300;
+    text-decoration: none solid rgb(63, 63, 63);
+    height: 51px;
+    width: 310px;
+    margin: 0 12px 0 12px;
+    min-width: auto;
+    min-width: auto;
+} */
+#addtobag{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 24px;
+    text-decoration: none solid rgb(34, 34, 34);
+    text-align: center;
+    text-transform: uppercase;
+    /* vertical-align: middle; */
+    white-space: nowrap;
+    word-spacing: 0;
+    color: #222222;
+    height: 40px;
+    /* width: 310px; */
+    width: 90%;
+    display: block;
+    margin: auto;
+    border: 1px solid #222222;
+    border-radius: 7px;
+    background-color: #ffffff;
+    padding: 0 16px 0 16px;
+    max-height: 40px; 
+    box-shadow: 0px 3px 2px rgba(63, 63, 63, 0.3);
+}
+#addtobag:hover,#result>button:hover{
+    box-shadow: inset -3px -3px 2px rgba(63, 63, 63, 0.3);
+    cursor: pointer;
+}
+#result{
+    width: 100%;
+    /* height: 86px; */
+    margin: 40px 0 30px 0;
+}
+#result>button{
+    padding: 8px 16px;
+    background: white;
+    border: 1px solid #222222;
+    box-shadow: 0px 3px 2px rgba(63, 63, 63, 0.3);
+    display: block;
+    margin: 10px auto 0 auto;
+    border-radius: 5px;
+    font-size: 12px;
+}
+#result>div{
+    width: 100%;
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+    /* margin-top: 45px; */
+}
+/* filter css */
+#filter{
+    padding: 0 40px;
+}
+#filter h3{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #222222;
+    cursor: pointer;
+    text-decoration: none solid rgb(33, 33, 33);
+}
+#click_desc_div{
+    border-bottom: 1px solid rgb(63, 63, 53);
+}
+.display_filter{
+    border-bottom: 1px solid rgb(63, 63, 53);
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#filter h4{
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #222222;
+    cursor: pointer;
+    text-decoration: none solid rgb(33, 33, 33);
+    text-transform: uppercase;
+}
+input[id^="check"]{
+    display: none;
+}
+.f_div{
+    margin: 10px 5px;
+}
+.f_label{
+    margin-left: 5px;
+}
+/* <!-- .drop_icon_div{
+    height: 25px;
+    width: 25px;
+}
+.drop_icon_div>img{
+    width: 100%;
+    height: 100%;
+} --> */
+#five-star,#four-star,#three-star{
+    display: flex;
+    align-items: center;
+}
+#five-star img{
+    width: 13px;
+    height: 13px;
+}
+#four-star img{
+    width: 13px;
+    height: 13px;
+}
+#three-star img{
+    width: 13px;
+    height: 13px;
+}
+@media only screen and (min-width:0px) and (max-width: 599px){
+    #products{
+        
+        grid-template-columns: repeat(1,1fr);
+        font-size: 12px;
+        /* margin: 0; */
+    }
+    .title,.info,.price{
+        font-size: 12px;
+    }
+    .img-div{
+        width: 150px;
+        height: 150px;
+        margin: auto;
+    }
+    #filter{
+        width: 40%;
+        font-size: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 5px;
+        padding-right: 20px;   
+    }
+    /* #products-sep{
+        width: 60%;
+    } */
+    .card{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #result{
+        display: block;
+    }
+}
+@media only screen and (min-width:600px) and (max-width: 839px){
+    #products{
+        
+        grid-template-columns: repeat(2,1fr);
+        font-size: 13px;
+        /* margin: 0; */
+    }
+    .title,.info,.price{
+        font-size: 13px;
+    }
+    .img-div{
+        width: 200px;
+        height: 200px;
+        margin: auto;
+    }
+    #filter{
+        width: 30%;
+        font-size: 12px;
+        /* display: none; */
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 5px;
+        padding-right: 20px;
+    }
+    #products-sep{
+        width: 65%;
+    }
+    .card{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #result{
+        display: block;
+    }
+}
