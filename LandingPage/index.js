@@ -163,6 +163,10 @@ if(ratingNo==0){
 
  image.addEventListener("click",()=>{
     console.log(value.Id)
+
+    localStorage.setItem("card-press-data",JSON.stringify(value.Id));
+    location.href = "../productInfo.html"
+
  })
 
 
@@ -177,15 +181,20 @@ if(ratingNo==0){
 //product
 function addToCard(value){
 
+  
 }
 
 function DermClickImage(value){
+    localStorage.setItem("card-press-data",JSON.stringify(value.Id));
+    location.href = "../productInfo.html"
+    
 
 }
 
 //dermaAllProduct
 document.getElementById("showAllDerma").addEventListener("click",()=>{
-
+    location.href = "../products_data/products.html"
+   
 })
 
 
@@ -193,5 +202,20 @@ document.getElementById("showAllDerma").addEventListener("click",()=>{
 
 // home page bestseller ptag
 document.getElementById("bestSeller").addEventListener("click",()=>{
-    
+    location.href = "../products_data/products.html"
+})
+
+
+
+
+// main buton 
+document.getElementById("mainShopNow").addEventListener("click",()=>{
+    location.href = "../products_data/products.html"
+
+})
+
+
+document.getElementById("bestSeller").addEventListener("click",()=>{
+    location.href = "../products_data/products.html"
+
 })
