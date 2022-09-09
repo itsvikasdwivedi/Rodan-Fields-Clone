@@ -1,0 +1,3 @@
+use the given footer.css file for the style of footer
+don't forget to import fontawsome
+in your html file make a div with id as "footer" at last, then import the footer.js to get the footer on the page
