@@ -32,9 +32,9 @@ async function shoProduct(){
     // </div>`
     
     result.map((value,en)=>{
-        if(en<15){
-            productDisplay(value);
-        }
+        // if(en<15){
+        //     // productDisplay(value);
+        // }
       
         if(en>=10 && 16>en){
             DesignedDisplay(value)
@@ -84,7 +84,9 @@ image.addEventListener("mouseleave",()=>{
 
 
 
-
+document.getElementById("bantadhaar").addEventListener("click", () => {
+    window.location.href = "./"
+} )
 
 
 
