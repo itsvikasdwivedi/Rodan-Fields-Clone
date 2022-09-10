@@ -3,12 +3,13 @@ import { navbar } from "./navbar.js";
 footer();
 navbar();
 
+// console.log(prevItem);
 
 const showProduct=async(id)=>{
     var res = await fetch(`http://localhost:3786/product?Id=${id}`);
     var res2 = await res.json();
     console.log(res2);
-    document.getElementById("g_title").innerHTML=`${res2.title} | Rodan + Fields®`
+    document.getElementById("g_title").innerHTML=`${res2[0].title} | Rodan + Fields®`
     var content=document.getElementById("g_mainContainer");
     content.innerHTML=""
     var el=res2[0];
@@ -86,7 +87,7 @@ const showProduct=async(id)=>{
         var size =  document.createElement("p");
         size.innerHTML=`Size: 10 mL / 0.33 Fl. Oz. <br>
         Typical Use: Once daily, in the AM`
-
+        
         var priceBox = document.createElement("div");
         priceBox.setAttribute("id","priceBox");
         var price1 = document.createElement("div");
@@ -131,6 +132,15 @@ const showProduct=async(id)=>{
         btn.setAttribute("id","g_add");
         btn.innerHTML="ADD TO BAG";
         
+        btn.onclick=()=>{
+            var prevItem=localStorage.getItem("product_add")||[];
+            
+            prevItem.push(localStorage.getItem("card-press-data"));
+            localStorage.setItem("button-press-data",JSON.stringify(prevItem));
+            window.location.href=""
+            // console.log(prevItem);
+
+        }
         var offerdiv = document.createElement("div");
         offerdiv.setAttribute("class","offer60");
         offerdiv.innerHTML=`
@@ -188,6 +198,5 @@ const showProduct=async(id)=>{
     document.getElementById("gd1show").classList.toggle("show")
     })
 }
-    var id =5;        
 window.addEventListener("load",()=>{showProduct(localStorage.getItem("card-press-data"))});
 

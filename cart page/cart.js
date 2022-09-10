@@ -4,7 +4,7 @@ navbar();
 footer();
 
 
-var prod=localStorage.getItem("button-press-data")||[];
+var prod=JSON.parse(localStorage.getItem("button-press-data"))||[];
 let totalCost=0;
 if(prod.length==0){
   document.getElementById("cardHead").innerHTML="";
@@ -136,9 +136,9 @@ const showdata=async(pro)=>{
   }
 // }
   function deleteIt(ind){
-  pro.splice(ind,1);
-  localStorage.setItem("item",JSON.stringify(pro));
-  showdata(pro);
+  product.splice(ind,1);
+  localStorage.setItem("item",JSON.stringify(product));
+  showdata(product);
 }
 
 

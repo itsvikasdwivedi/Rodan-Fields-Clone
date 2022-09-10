@@ -888,5 +888,6 @@ function card_pressing_func(id){
 function button_pressing_func(id){
     var get_button_pressing = JSON.parse(localStorage.getItem("button-press-data")) || [];
     get_button_pressing.push(id);
+    console.log(get_button_pressing);
     localStorage.setItem("button-press-data",JSON.stringify(get_button_pressing));
 }

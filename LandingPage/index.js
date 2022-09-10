@@ -4,9 +4,9 @@ navbar();
 footer();
 
 shoProduct();
-document.getElementById("showP").addEventListener("click",()=>{
-   window.location.href="../products_data/products.html"
-})
+// document.getElementById("showP").addEventListener("click",()=>{
+//    window.location.href="../products_data/products.html"
+// })
 document.getElementById("showAllDerma").addEventListener("click",()=>{
    window.location.href="../products_data/products.html"
 })
@@ -44,7 +44,7 @@ async function shoProduct(){
 
 
 
-    }catch{(err)
+    }catch(err){
         console.log("Error Aya Hai"+err.message)
 
     }
