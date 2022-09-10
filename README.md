@@ -1,8 +1,8 @@
-![Logo](https://www.rodanandfields.com.au/medias/rf-logo.svg?context=bWFzdGVyfGltYWdlc3w3MzczfGltYWdlL3N2Zyt4bWx8aW1hZ2VzL2g0Yi9oNmEvODc5ODc3MDQyOTk4Mi5zdmd8YjE3OTk4MDkxOGJmMWVmNmFiNDM1YjAxN2EyN2ZiOWUyMjQyNDYwMGRkNDY3NmUwOWNiMTFiOTY4OTk0MmIxMA)
+![image](https://dev.rodpub.com/images/214/786_main.jpg)
 
 ## Introduction
 
-Hello, we are learning MERN Stack at Masai School. During our Unit-5 on this web development journey, we got the group project with our batchmates to clone the website of cricbuzz. We have tried to clone the website in the time span of 1 week only.
+Hello, we are learning MERN Stack at Masai School. During our Unit-5 on this web development journey, we got the group project with our batchmates to clone the website of rodan and field. We have tried to clone the website in the time span of 1 week only.
 
 ## Tech Stack Used
 
