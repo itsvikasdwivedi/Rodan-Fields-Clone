@@ -6,7 +6,7 @@ navbar();
 // console.log(prevItem);
 
 const showProduct=async(id)=>{
-    var res = await fetch(`http://localhost:3786/product?Id=${id}`);
+    var res = await fetch(`https://json-my-products.herokuapp.com/products?Id=${id}`);
     var res2 = await res.json();
     console.log(res2);
     document.getElementById("g_title").innerHTML=`${res2[0].title} | Rodan + Fields®`

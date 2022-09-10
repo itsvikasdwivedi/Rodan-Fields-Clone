@@ -33,7 +33,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
             max = max-84+min;
         }
         if(min!==84){
-            let res = await fetch(`http://localhost:3786/products?_start=${min}&_end=${max}`);
+            let res = await fetch(`https://json-my-products.herokuapp.com/products?_start=${min}&_end=${max}`);
             let obj = await res.json();
             display_products(obj,min,max);
         }
@@ -767,7 +767,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
     var display_products_data = async() => {
         document.getElementById("products").innerHTML= null;
         document.getElementById("result").innerHTML = null;
-        let res = await fetch(`http://localhost:3786/products`);
+        let res = await fetch(`https://json-my-products.herokuapp.com/products`);
         var obj = await res.json();
         console.log(obj);
         var filters = JSON.parse(localStorage.getItem("filter_key")) || [];

@@ -23,7 +23,7 @@ var product=[];
 async function getit(id){
   try {
     
-    var res = await fetch(`http://localhost:3786/product?Id=${id}`);
+    var res = await fetch(`https://json-my-products.herokuapp.com/products?Id=${id}`);
     var res2 = await res.json();
     console.log(res2[0]);
     product.push(res2[0]);

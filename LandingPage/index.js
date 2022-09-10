@@ -15,7 +15,7 @@ let result;
 async function shoProduct(){
 
     try{
-          data = await fetch("http://localhost:3786/product");
+          data = await fetch("https://json-my-products.herokuapp.com/products");
           result = await data.json();
          
     //      document.getElementById("ProductParent").innerHTML="";
