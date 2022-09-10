@@ -1,4 +1,4 @@
-![Logo](https://www.rodanandfields.com/en-us/medias/rf-logo.svg?context=bWFzdGVyfGltYWdlc3w3MzczfGltYWdlL3N2Zyt4bWx8aW1hZ2VzL2g2MC9oYWIvODgyMjE0NzE4NjcxOC5zdmd8YjNmMmU2YTg5MTM0NTMzM2Y2ODg2ZmRkZTJhNmY2OWZhYmYyYjk5NWQxODkxODFiYjVkY2MxY2NjOWRlMzA5OA)
+![Logo](https://www.rodanandfields.com.au/medias/rf-logo.svg?context=bWFzdGVyfGltYWdlc3w3MzczfGltYWdlL3N2Zyt4bWx8aW1hZ2VzL2g0Yi9oNmEvODc5ODc3MDQyOTk4Mi5zdmd8YjE3OTk4MDkxOGJmMWVmNmFiNDM1YjAxN2EyN2ZiOWUyMjQyNDYwMGRkNDY3NmUwOWNiMTFiOTY4OTk0MmIxMA)
 
 ## Introduction
 
