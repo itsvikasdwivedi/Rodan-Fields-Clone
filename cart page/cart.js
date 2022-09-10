@@ -137,8 +137,8 @@ const showdata=async(pro)=>{
 // }
   function deleteIt(ind){
   product.splice(ind,1);
-  localStorage.setItem("item",JSON.stringify(product));
-  showdata(product);
+  localStorage.setItem("button-press-data",JSON.stringify(product.Id));
+  showdata(product.Id);
 }
 
 

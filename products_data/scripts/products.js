@@ -890,4 +890,5 @@ function button_pressing_func(id){
     get_button_pressing.push(id);
     console.log(get_button_pressing);
     localStorage.setItem("button-press-data",JSON.stringify(get_button_pressing));
+    window.location.href="../cart page/cart.html"
 }
