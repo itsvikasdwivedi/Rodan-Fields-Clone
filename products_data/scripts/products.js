@@ -33,7 +33,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
             max = max-84+min;
         }
         if(min!==84){
-            let res = await fetch(`http://localhost:3786/products?_start=${min}&_end=${max}`);
+            let res = await fetch(`https://json-my-products.herokuapp.com/products?_start=${min}&_end=${max}`);
             let obj = await res.json();
             display_products(obj,min,max);
         }
@@ -180,7 +180,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let f_label1 = document.createElement("label");
                 f_label1.setAttribute("class","f_label");
-                f_label1.innerText = "Regimen (7)";
+                f_label1.innerText = "Regimen";
             f_div1.append(f_check1,f_label1);
         //2
             let f_div2 = document.createElement("div");
@@ -192,7 +192,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let f_label2 = document.createElement("label");
                 f_label2.setAttribute("class","f_label");
-                f_label2.innerText = "Face Serums (15)";
+                f_label2.innerText = "Face Serums";
             f_div2.append(f_check2,f_label2);
         //3
             let f_div3 = document.createElement("div");
@@ -204,7 +204,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let f_label3 = document.createElement("label");
                 f_label3.setAttribute("class","f_label");
-                f_label3.innerText = "Eyes (16)";
+                f_label3.innerText = "Eyes";
             f_div3.append(f_check3,f_label3);
         //4
         let f_div4 = document.createElement("div");
@@ -216,7 +216,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let f_label4 = document.createElement("label");
                 f_label4.setAttribute("class","f_label");
-                f_label4.innerText = "Face Masks (5)";
+                f_label4.innerText = "Face Masks";
             f_div4.append(f_check4,f_label4); 
         //5
             let f_div5 = document.createElement("div");
@@ -228,7 +228,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let f_label5 = document.createElement("label");
                 f_label5.setAttribute("class","f_label");
-                f_label5.innerText = "Hand & Body (5)";
+                f_label5.innerText = "Hand & Body";
             f_div5.append(f_check5,f_label5);
         //6
             let f_div6 = document.createElement("div");
@@ -240,7 +240,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let f_label6 = document.createElement("label");
                 f_label6.setAttribute("class","f_label");
-                f_label6.innerText = "Sun Protection (9)";
+                f_label6.innerText = "Sun Protection";
             f_div6.append(f_check6,f_label6);
         //7
             let f_div7 = document.createElement("div");
@@ -252,7 +252,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let f_label7 = document.createElement("label");
                 f_label7.setAttribute("class","f_label");
-                f_label7.innerText = "Pro Skincare Tools (7)";
+                f_label7.innerText = "Pro Skincare Tools";
             f_div7.append(f_check7,f_label7);
         //8
             let f_div8 = document.createElement("div");
@@ -264,7 +264,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let f_label8 = document.createElement("label");
                 f_label8.setAttribute("class","f_label");
-                f_label8.innerText = "Accessories (8)";
+                f_label8.innerText = "Accessories";
             f_div8.append(f_check8,f_label8);
         //9
         let f_div9 = document.createElement("div");
@@ -276,7 +276,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let f_label9 = document.createElement("label");
                 f_label9.setAttribute("class","f_label");
-                f_label9.innerText = "Special Offers (22)";
+                f_label9.innerText = "Special Offers";
             f_div9.append(f_check9,f_label9);
         first_filter_div1.append(f_div1,f_div2,f_div3,f_div4,f_div5,f_div6,f_div7,f_div8,f_div9);
     
@@ -335,7 +335,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let s_label1 = document.createElement("label");
                 s_label1.setAttribute("class","f_label");
-                s_label1.innerText = "Fine Lines & Wrinkles (15)";
+                s_label1.innerText = "Fine Lines & Wrinkles";
             s_div1.append(s_check1,s_label1);
         //2
             let s_div2 = document.createElement("div");
@@ -347,7 +347,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let s_label2 = document.createElement("label");
                 s_label2.setAttribute("class","f_label");
-                s_label2.innerText = "Lifting & Firming (8)";
+                s_label2.innerText = "Lifting & Firming";
             s_div2.append(s_check2,s_label2);
         //3
             let s_div3 = document.createElement("div");
@@ -359,7 +359,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let s_label3 = document.createElement("label");
                 s_label3.setAttribute("class","f_label");
-                s_label3.innerText = "Dull & Tired Skin (14)";
+                s_label3.innerText = "Dull & Tired Skin";
             s_div3.append(s_check3,s_label3);
         //4
         let s_div4 = document.createElement("div");
@@ -371,7 +371,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let s_label4 = document.createElement("label");
                 s_label4.setAttribute("class","f_label");
-                s_label4.innerText = "Acne & Breakouts (19)";
+                s_label4.innerText = "Acne & Breakouts";
             s_div4.append(s_check4,s_label4); 
         //5
             let s_div5 = document.createElement("div");
@@ -383,7 +383,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let s_label5 = document.createElement("label");
                 s_label5.setAttribute("class","f_label");
-                s_label5.innerText = "Dark Spots & Uneven Skin Tone (15)";
+                s_label5.innerText = "Dark Spots & Uneven Skin Tone";
             s_div5.append(s_check5,s_label5);
         //6
             let s_div6 = document.createElement("div");
@@ -395,7 +395,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let s_label6 = document.createElement("label");
                 s_label6.setAttribute("class","f_label");
-                s_label6.innerText = "Sensitivity & Visible Redness (8)";
+                s_label6.innerText = "Sensitivity & Visible Redness";
             s_div6.append(s_check6,s_label6);
         //7
         let s_div7 = document.createElement("div");
@@ -407,7 +407,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let s_label7 = document.createElement("label");
                 s_label7.setAttribute("class","f_label");
-                s_label7.innerText = "Pores & Blackheads (6)";
+                s_label7.innerText = "Pores & Blackheads";
             s_div7.append(s_check7,s_label7);
         //8
         let s_div8 = document.createElement("div");
@@ -419,7 +419,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let s_label8 = document.createElement("label");
                 s_label8.setAttribute("class","f_label");
-                s_label8.innerText = "Dry Skin (8)";
+                s_label8.innerText = "Dry Skin";
             s_div8.append(s_check8,s_label8);
         sec_filter_div1.append(s_div1,s_div2,s_div3,s_div4,s_div5,s_div6,s_div7,s_div8);
 
@@ -477,7 +477,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let t_label1 = document.createElement("label");
                 t_label1.setAttribute("class","f_label");
-                t_label1.innerText = "Face (74)";
+                t_label1.innerText = "Face";
             t_div1.append(t_check1,t_label1);
         //2
             let t_div2 = document.createElement("div");
@@ -489,7 +489,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let t_label2 = document.createElement("label");
                 t_label2.setAttribute("class","f_label");
-                t_label2.innerText = "Eyes (7)";
+                t_label2.innerText = "Eyes";
             t_div2.append(t_check2,t_label2);
         //3
             let t_div3 = document.createElement("div");
@@ -501,7 +501,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let t_label3 = document.createElement("label");
                 t_label3.setAttribute("class","f_label");
-                t_label3.innerText = "Eyelashes (2)";
+                t_label3.innerText = "Eyelashes";
             t_div3.append(t_check3,t_label3);
         //4
         let t_div4 = document.createElement("div");
@@ -525,7 +525,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let t_label5 = document.createElement("label");
                 t_label5.setAttribute("class","f_label");
-                t_label5.innerText = "Hands (2)";
+                t_label5.innerText = "Hands";
             t_div5.append(t_check5,t_label5);
         //6
             let t_div6 = document.createElement("div");
@@ -537,7 +537,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let t_label6 = document.createElement("label");
                 t_label6.setAttribute("class","f_label");
-                t_label6.innerText = "Lips (3)";
+                t_label6.innerText = "Lips";
             t_div6.append(t_check6,t_label6);
        
         third_filter_div1.append(t_div1,t_div2,t_div3,t_div4,t_div5,t_div6);
@@ -596,7 +596,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let fourth_label1 = document.createElement("label");
                 fourth_label1.setAttribute("class","f_label");
-                fourth_label1.innerText = "Redefine (21)";
+                fourth_label1.innerText = "Redefine";
             fourth_div1.append(fourth_check1,fourth_label1);
         //2
             let fourth_div2 = document.createElement("div");
@@ -608,7 +608,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let fourth_label2 = document.createElement("label");
                 fourth_label2.setAttribute("class","f_label");
-                fourth_label2.innerText = "Reverse (11)";
+                fourth_label2.innerText = "Reverse";
             fourth_div2.append(fourth_check2,fourth_label2);
         // //3
         //     let fourth_div3 = document.createElement("div");
@@ -632,7 +632,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let fourth_label4 = document.createElement("label");
                 fourth_label4.setAttribute("class","f_label");
-                fourth_label4.innerText = "Soothe (8)";
+                fourth_label4.innerText = "Soothe";
             fourth_div4.append(fourth_check4,fourth_label4); 
         //5
             let fourth_div5 = document.createElement("div");
@@ -644,7 +644,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let fourth_label5 = document.createElement("label");
                 fourth_label5.setAttribute("class","f_label");
-                fourth_label5.innerText = "Spotless (4)";
+                fourth_label5.innerText = "Spotless";
             fourth_div5.append(fourth_check5,fourth_label5);
         //6
             let fourth_div6 = document.createElement("div");
@@ -656,7 +656,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let fourth_label6 = document.createElement("label");
                 fourth_label6.setAttribute("class","f_label");
-                fourth_label6.innerText = "Recharge (9)";
+                fourth_label6.innerText = "Recharge";
             fourth_div6.append(fourth_check6,fourth_label6);
         //7
             let fourth_div7 = document.createElement("div");
@@ -668,7 +668,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let fourth_label7 = document.createElement("label");
                 fourth_label7.setAttribute("class","f_label");
-                fourth_label7.innerText = "Enhancements (31)";
+                fourth_label7.innerText = "Enhancements";
             fourth_div7.append(fourth_check7,fourth_label7);
         //8
             let fourth_div8 = document.createElement("div");
@@ -680,7 +680,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let fourth_label8 = document.createElement("label");
                 fourth_label8.setAttribute("class","f_label");
-                fourth_label8.innerText = "Dermacosmetics (2)";
+                fourth_label8.innerText = "Dermacosmetics";
             fourth_div8.append(fourth_check8,fourth_label8);
         //9
             let fourth_div9 = document.createElement("div");
@@ -692,7 +692,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 });
                 let fourth_label9 = document.createElement("label");
                 fourth_label9.setAttribute("class","f_label");
-                fourth_label9.innerText = "Essentials (8)";
+                fourth_label9.innerText = "Essentials";
             fourth_div9.append(fourth_check9,fourth_label9);
         fourth_filter_div1.append(fourth_div1,fourth_div2,fourth_div4,fourth_div5,fourth_div6,fourth_div7,fourth_div8,fourth_div9);
     
@@ -767,7 +767,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
     var display_products_data = async() => {
         document.getElementById("products").innerHTML= null;
         document.getElementById("result").innerHTML = null;
-        let res = await fetch(`http://localhost:3786/products`);
+        let res = await fetch(`https://json-my-products.herokuapp.com/products`);
         var obj = await res.json();
         console.log(obj);
         var filters = JSON.parse(localStorage.getItem("filter_key")) || [];
@@ -890,5 +890,9 @@ function button_pressing_func(id){
     get_button_pressing.push(id);
     console.log(get_button_pressing);
     localStorage.setItem("button-press-data",JSON.stringify(get_button_pressing));
+<<<<<<< HEAD
     window.location.href="../cart page/cart.html"
+=======
+    window.location.href ="../cart page/cart.html";
+>>>>>>> a5568b897f57bd613322745daa30f3a911f2cfb5
 }

@@ -86,9 +86,6 @@ export const navbar=()=>{
                    <div class="inner"></div>
                    <button type="submit">login</button>
                 </div>
-                <div class="signup-link">
-                   Not a member? <a href="#">Signup now</a>
-                </div>
              </form>
           </div>
        </div>

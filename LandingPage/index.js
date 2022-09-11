@@ -15,7 +15,7 @@ let result;
 async function shoProduct(){
 
     try{
-          data = await fetch("http://localhost:3786/product");
+          data = await fetch("https://json-my-products.herokuapp.com/products");
           result = await data.json();
          
     //      document.getElementById("ProductParent").innerHTML="";
@@ -32,9 +32,9 @@ async function shoProduct(){
     // </div>`
     
     result.map((value,en)=>{
-        if(en<15){
-            productDisplay(value);
-        }
+        // if(en<15){
+        //     // productDisplay(value);
+        // }
       
         if(en>=10 && 16>en){
             DesignedDisplay(value)
@@ -84,7 +84,9 @@ image.addEventListener("mouseleave",()=>{
 
 
 
-
+document.getElementById("bantadhaar").addEventListener("click", () => {
+    window.location.href = "./"
+} )
 
 
 
