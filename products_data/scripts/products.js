@@ -33,7 +33,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
             max = max-84+min;
         }
         if(min!==84){
-            let res = await fetch(`https://json-my-products.herokuapp.com/products?_start=${min}&_end=${max}`);
+            let res = await fetch(`https://clone-of-rodan.herokuapp.com/product?_start=${min}&_end=${max}`);
             let obj = await res.json();
             display_products(obj,min,max);
         }
@@ -767,7 +767,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
     var display_products_data = async() => {
         document.getElementById("products").innerHTML= null;
         document.getElementById("result").innerHTML = null;
-        let res = await fetch(`https://json-my-products.herokuapp.com/products`);
+        let res = await fetch(`https://clone-of-rodan.herokuapp.com/product`);
         var obj = await res.json();
         console.log(obj);
         var filters = JSON.parse(localStorage.getItem("filter_key")) || [];
@@ -890,9 +890,5 @@ function button_pressing_func(id){
     get_button_pressing.push(id);
     console.log(get_button_pressing);
     localStorage.setItem("button-press-data",JSON.stringify(get_button_pressing));
-<<<<<<< HEAD
-    window.location.href="../cart page/cart.html"
-=======
     window.location.href ="../cart page/cart.html";
->>>>>>> a5568b897f57bd613322745daa30f3a911f2cfb5
 }
