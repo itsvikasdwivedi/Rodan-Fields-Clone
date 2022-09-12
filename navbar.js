@@ -249,7 +249,12 @@ const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
 document.getElementById("logo").addEventListener("click",()=>{
-  window.location.href="index.html"
+  // console.log(window.location.)
+  if(window.location.pathname=="/Team-Rodan/cart.html"){
+    window.location.href="index.html"
+  }else{
+    window.location.href="../index.html"
+  }
 })
 openModalButtons.forEach(button => {
   button.addEventListener('click', () => {
@@ -258,7 +263,11 @@ openModalButtons.forEach(button => {
   })
 })
 document.getElementById("v-bag-button").addEventListener("click",()=>{
-  window.location.href="../cart.html"
+  if(window.location.pathname=="/Team-Rodan/cart.html"){
+    window.location.href="./cart.html"
+  }else{
+    window.location.href="../cart.html"
+  }
 })
 
 overlay.addEventListener('click', () => {
