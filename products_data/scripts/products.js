@@ -109,7 +109,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                 card_pressing_func(element.Id);
             })
             addtobagbtn.addEventListener("click",function(){
-                button_pressing_func(element.Id);
+                button_pressing_func(element);
             })
             card.append(upper,lower);
             document.getElementById("products").append(card);
@@ -869,7 +869,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
                     card_pressing_func(element.Id);
                 })
                 addtobagbtn.addEventListener("click",function(){
-                    button_pressing_func(element.Id);
+                    button_pressing_func(element);
                 })
                 document.getElementById("products").append(card);
 
@@ -883,12 +883,11 @@ localStorage.setItem("filter_key",JSON.stringify([]));
 }
 function card_pressing_func(id){
     localStorage.setItem("card-press-data",id);
-    window.location.href="../productInfo.html"
+    window.location.href="../productInfo/productInfo.html"
 }
 function button_pressing_func(id){
     var get_button_pressing = JSON.parse(localStorage.getItem("button-press-data")) || [];
     get_button_pressing.push(id);
     console.log(get_button_pressing);
     localStorage.setItem("button-press-data",JSON.stringify(get_button_pressing));
-    window.location.href ="../cart page/cart.html";
 }

@@ -1,5 +1,5 @@
-import {footer} from "./footer.js";
-import { navbar } from "./navbar.js";
+import {footer} from "../footer.js";
+import { navbar } from "../navbar.js";
 footer();
 navbar();
 

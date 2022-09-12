@@ -92,7 +92,7 @@ export const navbar=()=>{
 
        <!-- login popup ends here -->
         <div>
-          <button class="v-bag-button" data-modal-target="#modal">
+          <button id="v-bag-button"class="v-bag-button" data-modal-target="#modal">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
               <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
           </svg>
@@ -248,12 +248,14 @@ export const navbar=()=>{
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
-
 openModalButtons.forEach(button => {
   button.addEventListener('click', () => {
     const modal = document.querySelector(button.dataset.modalTarget)
     openModal(modal)
   })
+})
+document.getElementById("v-bag-button").addEventListener("click",()=>{
+  window.location.href="../cart.html"
 })
 
 overlay.addEventListener('click', () => {
