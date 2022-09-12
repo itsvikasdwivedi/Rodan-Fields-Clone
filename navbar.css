@@ -43,6 +43,7 @@ padding: 0 20px 0 20px;
 }
 .v-website-logo{
   margin-top: 5px;
+  cursor: pointer;
   /* border: 1px solid teal; */
 }
 .v-Consult{

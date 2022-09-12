@@ -8,7 +8,7 @@ navbar();
 const showProduct=async(id)=>{
     var res = await fetch(`https://clone-of-rodan.herokuapp.com/product?Id=${id}`);
     var res2 = await res.json();
-    console.log(res2);
+    // console.log(res2);
     document.getElementById("g_title").innerHTML=`${res2[0].title} | Rodan + Fields®`
     var content=document.getElementById("g_mainContainer");
     content.innerHTML=""
@@ -133,12 +133,12 @@ const showProduct=async(id)=>{
         btn.innerHTML="ADD TO BAG";
         
         btn.onclick=()=>{
-            var prevItem=localStorage.getItem("product_add")||[];
+            var prevItem=JSON.parse(localStorage.getItem("button-press-data"))||[];
             
-            prevItem.push(localStorage.getItem("card-press-data"));
+            prevItem.push(el);
             localStorage.setItem("button-press-data",JSON.stringify(prevItem));
-            window.location.href=""
-            // console.log(prevItem);
+            console.log(prevItem);
+            window.location.href="../cart.html"
 
         }
         var offerdiv = document.createElement("div");
