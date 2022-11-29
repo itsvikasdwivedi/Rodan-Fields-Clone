@@ -1,11 +1,12 @@
-export const navbar=()=>{
+ const navbar=()=>{
+    console.log("here")
     document.getElementById("navbar").innerHTML=`<nav id="v-navbar-I">
     <div class="v-Consult">
         <p><a href="#"></a>find a consultant</p>
     </div>
     <div class="v-website-logo">
         <img id="logo"
-            src="https://www.rodanandfields.com/en-us/medias/rf-logo.svg?context=bWFzdGVyfGltYWdlc3w3MzczfGltYWdlL3N2Zyt4bWx8aW1hZ2VzL2g2MC9oYWIvODgyMjE0NzE4NjcxOC5zdmd8YjNmMmU2YTg5MTM0NTMzM2Y2ODg2ZmRkZTJhNmY2OWZhYmYyYjk5NWQxODkxODFiYjVkY2MxY2NjOWRlMzA5OA"
+            src="https://www.rodanandfields.com/en-us/medias/HolidayLogo.svg?context=bWFzdGVyfGltYWdlc3w0ODgzfGltYWdlL3N2Zyt4bWx8aW1hZ2VzL2hkOC9oMTMvMTU4ODkzODY2NjgwNjIuc3ZnfGVjZTFhZDdhZmUwZDAzMGJjMjBmNDFjNWY1NjgwMjk1YWJkZDhjM2U2MjM2YjI0MWUyMjgyYWRiY2Q4M2M3ZjQ"
             alt="rodan-logo">
     </div>
     <div id="v-navbar-child">
@@ -394,5 +395,5 @@ document.getElementById("searchTerm").addEventListener("input",debounce(showit,1
 // }
 
 }
-
+ export default navbar;
 // sakti_a,and body
