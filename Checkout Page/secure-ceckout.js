@@ -42,7 +42,7 @@ submitBtn.addEventListener("click", function(){
   progressText[current - 1].classList.add("active");
   current += 1;
   setTimeout(function(){
-    alert("Your Form Successfully Signed up");
+    alert("Your Order Placed Successfully");
     location.reload();
   },800);
 });
