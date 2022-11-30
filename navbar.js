@@ -342,6 +342,7 @@ document.getElementById("myDropdown").style.display="none";
 const debounce =(fn,delay)=>{
     let timer;
     return function(){
+        console.log(timer);
         clearTimeout(timer);
         timer=setTimeout(function(){
             fn.call();
@@ -350,38 +351,46 @@ const debounce =(fn,delay)=>{
 }
 const showit=async()=>{
     var results=document.getElementById("searchTerm").value;
-    console.log(results);
-    var res = await fetch(`https://clone-of-rodan.herokuapp.com/product?q=${results}`);
-    var res2 = await res.json();
-    console.log(res2);
-    if(res2.length>0){
+    console.log(results.length);
+    if(results.length==0){
         var Sresults=document.getElementById("searchItem");
-        Sresults.innerHTML="";
-        res2.map(el=>{
-            var div = document.createElement("div");
-            div.setAttribute("class","items");
-            div.onclick=()=>{
-                localStorage.setItem("card-press-data",el.Id);
-                if(window.location.pathname="Team-Rodan/cart.html"){
-                    window.location.href="./productInfo/productInfo.html";
-                }else{
-                    window.location.href="../productInfo/productInfo.html";
+            Sresults.innerHTML="";
+    }
+    if(results.length>0){
 
+        var res = await fetch(`https://clone-of-rodan.herokuapp.com/product?q=${results}`);
+        var res2 = await res.json();
+        console.log(res2);
+        if(res2.length>0){
+            var Sresults=document.getElementById("searchItem");
+            Sresults.innerHTML="";
+
+            res2.map(el=>{
+                var div = document.createElement("div");
+                div.setAttribute("class","items");
+                div.onclick=()=>{
+                    localStorage.setItem("card-press-data",el.Id);
+                    if(window.location.pathname="Team-Rodan/cart.html"){
+                        window.location.href="./productInfo/productInfo.html";
+                    }else{
+                        window.location.href="../productInfo/productInfo.html";
+    
+                    }
                 }
-            }
-            var image = document.createElement("img");
-            image.src=el.image;
-            var p1 = document.createElement('p');
-            p1.innerHTML=el.title;
-            var p2 = document.createElement('p');
-            p2.innerHTML=`$${el.price}`;
-            div.append(image,p1,p2);
-            Sresults.append(div);
-        })
+                var image = document.createElement("img");
+                image.src=el.image;
+                var p1 = document.createElement('p');
+                p1.innerHTML=el.title;
+                var p2 = document.createElement('p');
+                p2.innerHTML=`$${el.price}`;
+                div.append(image,p1,p2);
+                Sresults.append(div);
+            })
+    }
         
     }
 }
-document.getElementById("searchTerm").addEventListener("input",debounce(showit,1000));
+document.getElementById("searchTerm").addEventListener("input",debounce(showit,500));
 
 // addto cart is still remaining
 // var prod=JSON.parse(localStorage.getItem("button-press-data"))||[];

@@ -596,14 +596,17 @@
     /* margin-right: 20px; */
   }
   #searchItem{
-   border: 1px solid teal;
+   /* border: 1px solid teal; */
    width:90%;
    margin-left: 50px;
    display: grid;
    grid-template-columns: repeat(4,1fr);
     gap:10px;
+    margin-top: 20px;
   }
   .items{
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     text-align: center;
     cursor: pointer;
   }

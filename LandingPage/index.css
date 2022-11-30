@@ -59,7 +59,7 @@
 
         }
         /* ----------------------------------shakti-------------------------------------------- */
-        #MainContentTileDiv p:nth-child(3),
+        /* #MainContentTileDiv p:nth-child(3),
         a {
             font-size: 13px;
             margin-top: -20px;
@@ -70,7 +70,7 @@
             color: rgb(52, 51, 51);
             line-height: 20px;
             padding-right: 50px;
-        }
+        } */
 
         #lapImage {
 
