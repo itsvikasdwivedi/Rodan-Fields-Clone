@@ -100,6 +100,7 @@
                         <button type="submit">login</button>
                     </div>
                 </form>
+                // <div id="gsignin2" data-onsuccess="onSignIn">Google</div>
             </div>
         </div>
 
@@ -261,6 +262,15 @@
 
     </div>
 </div>`
+
+// document.getElementById("gsignin2").addEventListener("click",onSignIn)
+// function onSignIn(googleUser) {
+//     var profile = googleUser.getBasicProfile();
+//     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+//     console.log('Name: ' + profile.getName());
+//     console.log('Image URL: ' + profile.getImageUrl());
+//     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+//   }
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
