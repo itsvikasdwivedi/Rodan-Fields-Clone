@@ -15,7 +15,7 @@ let result;
 async function shoProduct(){
 
     try{
-          data = await fetch("https://clone-of-rodan.herokuapp.com/product");
+          data = await fetch("https://rodandata.onrender.com/product");
           result = await data.json();
          
     //      document.getElementById("ProductParent").innerHTML="";

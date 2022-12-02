@@ -3,6 +3,7 @@ import  navbar  from "../../navbar.js";
 
 footer();
 navbar();
+const api="https://rodandata.onrender.com/product";
 
 localStorage.setItem("filter_key",JSON.stringify([]));
     var five_star = `<div id="five-star">
@@ -33,7 +34,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
             max = max-84+min;
         }
         if(min!==84){
-            let res = await fetch(`https://clone-of-rodan.herokuapp.com/product?_start=${min}&_end=${max}`);
+            let res = await fetch(`${api}?_start=${min}&_end=${max}`);
             let obj = await res.json();
             display_products(obj,min,max);
         }
@@ -767,7 +768,7 @@ localStorage.setItem("filter_key",JSON.stringify([]));
     var display_products_data = async() => {
         document.getElementById("products").innerHTML= null;
         document.getElementById("result").innerHTML = null;
-        let res = await fetch(`https://clone-of-rodan.herokuapp.com/product`);
+        let res = await fetch(`${api}`);
         var obj = await res.json();
         console.log(obj);
         var filters = JSON.parse(localStorage.getItem("filter_key")) || [];
@@ -889,5 +890,45 @@ function button_pressing_func(id){
     var get_button_pressing = JSON.parse(localStorage.getItem("button-press-data")) || [];
     get_button_pressing.push(id);
     console.log(get_button_pressing);
+    
+document.getElementById("counteritem").innerText=get_button_pressing.length;
+document.getElementById("innercounteritem").innerText=get_button_pressing.length;
+const setSideCart=()=>{
+    // console.log(prod);
+    let cartData=document.getElementById("cartshow");
+    if(get_button_pressing.length==0){
+        cartData.innerHTML="";
+        cartData.innerHTML=`<div class="empty">
+            <h3>Your Bag Is Empty</h3><br>
+            <p>Shop now to add products to your bag</p><br><br>
+            <a id="startshop">START SHOPPING</a>
+            </div>`;
+        document.getElementById("bottombuy").innerHTML=""
+        document.getElementById("startshop").onclick=function(){
+            console.log(window.location.pathname);
+            window.location.href="../products_data/products.html"
+        };
+    }else{
+            cartData.innerHTML="";
+            let total=0;
+            get_button_pressing.map(el=>total+=el.price)
+            console.log(total)
+            document.getElementById("subTotal").innerText=`$ ${total}`;
+            get_button_pressing.map(el=>{
+            cartData.innerHTML+=`<div class="cartItem">
+                                <img src=${el.image} width="90px" alt="">
+                                <div>
+                                    <h3>${el.title}</h3>
+                                    <div>
+                                        <p>Qty: 1</p>
+                                        <p>$ ${el.price}</p>
+                                    </div>
+                                </div>
+                            </div>`
+                            
+        })
+    }
+}
+    setSideCart()
     localStorage.setItem("button-press-data",JSON.stringify(get_button_pressing));
 }

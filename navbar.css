@@ -239,6 +239,7 @@
     /* left: -100px;
     right: 500px; */
   }
+   
   .dropdown:hover .dropdown-content-I{
     display: block;
   }
@@ -248,7 +249,6 @@
   .dropdown:hover .dropdown-content-II{
   display: block;
   }
-
   @media all and (min-width: 451px) and (max-width: 750px){
   #v-navbar-II,#v-navbar-child,.v-Consult{
     display: none;
@@ -410,7 +410,7 @@
   }
   
   .modal {
-  position: absolute;
+  position: fixed;
   display: none;
   /* top: 50%; */
   /* left: 85.6%; */
@@ -431,7 +431,7 @@
   
   .modal.active {
     display: block;
-
+    z-index: 12;
   /* transform: translate(-50%, -50%) scale(1); */
   }
   
@@ -456,8 +456,14 @@
   font-size: 1.25rem;
   font-weight: bold;
   }
-  
-  .modal-body > div{
+  .modal-body >.cartshow{
+    height: 600px;
+    overflow-y: scroll;
+  }
+  .modal-body >.cartshow::-webkit-scrollbar{
+      display: none;
+  }
+  .modal-body >.cartshow> .empty{
   padding: 10px 15px;
   text-align: center;
   align-items: center;
@@ -468,17 +474,84 @@
   .modal-body{
     /* border: 1px solid teal; */
     height: 80%;
-    text-align: center;
+    /* overflow-y: scroll; */
+    /* text-align: center; */
   }
-  .modal-body > div > a{
+  .modal-body .cartItem{
+    display:flex;
+    flex-direction: row;
+    padding: 5px 20px;
+    align-items: center;
+    gap:20px;
+
+  }
+  .modal-body .cartItem>div{
+    width: 80%;
+  }
+  .modal-body .cartItem>div>h3{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #222;
+    margin: 0;
+    line-height: 1.5;
+    letter-spacing: .5px;
+  }
+  .modal-body .cartItem>div>div{
+    display: flex;
+    justify-content: space-between;
+  }
+  .modal-body .cartItem>div>div>p:first-child{
+    font-size: .8rem;
+    font-weight: 400;
+    color: #7c7f88;
+    line-height: 2.4rem;
+    margin:0;
+    letter-spacing: .5px;
+  }
+  .modal-body .cartItem>div>div>p:last-child{
+    font-size: 1.0rem;
+    font-weight: 400;
+    color: #222;
+    line-height: 2.4rem;
+    letter-spacing: .5px;
+    margin:0;
+    font-weight: 600;
+  }
+  .modal-body >.btnsub{
+    position: absolute;
+    width: 100%;
+    bottom:0;
+    right:0;
+  }
+  .modal-body >.btnsub>.subtotal{
+    padding:12px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+  }
+  .modal-body >.btnsub>.btncheck{
+    width:95%;
+    margin:5px auto;
+  }
+  .modal-body >.btnsub button{
+    border-radius: 0.4rem;
+    height: 3rem;
+    width: 100%;
+    color: white;
+    background-color: black;
+    border: 0.1rem solid #222 !important;
+  }
+  .modal-body > .cartshow>.empty > a{
     text-decoration: none;
     padding: 10px 70px;
+    cursor: pointer;
     /* border: 1px solid violet; */
     background-color: black;
     border-radius: 6px;
     color: white;
   }
-  .modal-body > div > h3{
+  .modal-body >.cartshow> .empty > h3{
     font-weight: 300;
   }
   
@@ -492,6 +565,7 @@
   bottom: 0;
   background-color: rgba(96,96,96,0.7);
   pointer-events: none;
+  z-index: 10;
   }
   
   #overlay.active {
@@ -504,7 +578,7 @@
   background: transparent;
   position: relative;
   }
-  .counteritem.show{
+  .counteritem{
     color: white;
     font-size: 10px;
     height: 15px;
@@ -514,6 +588,23 @@
     bottom: 0;
     right: 0;
     left:8px;
+    top:10px;
+    background-color: black;
+  }
+  .title{
+    position: relative;
+  }
+  .innercounteritem{
+    color: white;
+    font-size: 10px;
+    height: 15px;
+    width: 15px;
+    padding-left:5px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left:10px;
     top:10px;
     background-color: black;
   }

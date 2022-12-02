@@ -147,6 +147,27 @@ function deleteIt(ind){
   prod.splice(ind,1);
   localStorage.setItem("button-press-data",JSON.stringify(prod));
   showdata(prod);
+  document.getElementById("counteritem").innerText=prod.length;
+  document.getElementById("innercounteritem").innerText=prod.length;
+  let cartData=document.getElementById("cartshow");
+  cartData.innerHTML="";
+          let total=0;
+          prod.map(el=>total+=el.price)
+          console.log(total)
+          document.getElementById("subTotal").innerText=`$ ${total}`;
+          prod.map(el=>{
+          cartData.innerHTML+=`<div class="cartItem">
+                              <img src=${el.image} width="90px" alt="">
+                              <div>
+                                  <h3>${el.title}</h3>
+                                  <div>
+                                      <p>Qty: 1</p>
+                                      <p>$ ${el.price}</p>
+                                  </div>
+                              </div>
+                          </div>`
+                          
+      })
 }
 if(prod.length==0){
   document.getElementById("cardHead").innerHTML="";
@@ -162,20 +183,88 @@ if(prod.length==0){
       document.getElementById("startShop").addEventListener("click",()=>{
         window.location.href="./products_data/products.html"
       })
+      let cartData=document.getElementById("cartshow");
+      cartData.innerHTML="";
+      cartData.innerHTML=`<div class="empty">
+          <h3>Your Bag Is Empty</h3><br>
+          <p>Shop now to add products to your bag</p><br><br>
+          <a id="startshop">START SHOPPING</a>
+          </div>`;
+      document.getElementById("bottombuy").innerHTML=""
+      document.getElementById("startshop").onclick=function(){
+          console.log(window.location.pathname);
+          window.location.href="./products_data/products.html"
+      };
 }else{
   showdata(prod);
+  document.getElementById("couponbtn").addEventListener("click",()=>{
+    var val = document.getElementById("coupon").value;
+    if(val=='123456789'){
+      var cpn=document.getElementById("cpn");
+      cpn.classList.add("here");
+      document.getElementById("cDis").innerHTML=`$${10}`
+      var fTotal=+document.getElementById("CartTotal").innerText.split("$")[1]-10;
+      document.getElementById("CartTotal").innerHTML=`
+      $${fTotal}`
+    }
+  })
+  let cartData=document.getElementById("cartshow");
+  cartData.innerHTML="";
+          let total=0;
+          prod.map(el=>total+=el.price)
+          console.log(total)
+          document.getElementById("subTotal").innerText=`$ ${total}`;
+          prod.map(el=>{
+          cartData.innerHTML+=`<div class="cartItem">
+                              <img src=${el.image} width="90px" alt="">
+                              <div>
+                                  <h3>${el.title}</h3>
+                                  <div>
+                                      <p>Qty: 1</p>
+                                      <p>$ ${el.price}</p>
+                                  </div>
+                              </div>
+                          </div>`
+                          
+      })
 }
+// const setSideCart=()=>{
+//   console.log(prod);
+//   let cartData=document.getElementById("cartshow");
+//   if(prod.length==0){
+//       cartData.innerHTML="";
+//       cartData.innerHTML=`<div class="empty">
+//           <h3>Your Bag Is Empty</h3><br>
+//           <p>Shop now to add products to your bag</p><br><br>
+//           <a id="startshop">START SHOPPING</a>
+//           </div>`;
+//       document.getElementById("bottombuy").innerHTML=""
+//       document.getElementById("startshop").onclick=function(){
+//           console.log(window.location.pathname);
+//           window.location.href="../products_data/products.html"
+//       };
+//   }else{
+//           cartData.innerHTML="";
+//           let total=0;
+//           prod.map(el=>total+=el.price)
+//           console.log(total)
+//           document.getElementById("subTotal").innerText=`$ ${total}`;
+//           prod.map(el=>{
+//           cartData.innerHTML+=`<div class="cartItem">
+//                               <img src=${el.image} width="90px" alt="">
+//                               <div>
+//                                   <h3>${el.title}</h3>
+//                                   <div>
+//                                       <p>Qty: 1</p>
+//                                       <p>$ ${el.price}</p>
+//                                   </div>
+//                               </div>
+//                           </div>`
+                          
+//       })
+//   }
+// }
+// window.addEventListener("load",setSideCart);
 
 
-document.getElementById("couponbtn").addEventListener("click",()=>{
-  var val = document.getElementById("coupon").value;
-  if(val=='123456789'){
-    var cpn=document.getElementById("cpn");
-    cpn.classList.add("here");
-    document.getElementById("cDis").innerHTML=`$${10}`
-    var fTotal=+document.getElementById("CartTotal").innerText.split("$")[1]-10;
-    document.getElementById("CartTotal").innerHTML=`
-    $${fTotal}`
-  }
-})
 
