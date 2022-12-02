@@ -2,11 +2,12 @@ import {footer} from "../footer.js";
 import  navbar  from "../navbar.js";
 footer();
 navbar();
+const api="https://rodandata.onrender.com/product"
 
 // console.log(prevItem);
 
 const showProduct=async(id)=>{
-    var res = await fetch(`https://clone-of-rodan.herokuapp.com/product?Id=${id}`);
+    var res = await fetch(`${api}?Id=${id}`);
     var res2 = await res.json();
     // console.log(res2);
     document.getElementById("g_title").innerHTML=`${res2[0].title} | Rodan + Fields®`
@@ -137,6 +138,45 @@ const showProduct=async(id)=>{
             
             prevItem.push(el);
             localStorage.setItem("button-press-data",JSON.stringify(prevItem));
+            document.getElementById("counteritem").innerText=prevItem.length;
+            document.getElementById("innercounteritem").innerText=prevItem.length;
+            const setSideCart=()=>{
+                // console.log(prod);
+                let cartData=document.getElementById("cartshow");
+                if(prevItem.length==0){
+                    cartData.innerHTML="";
+                    cartData.innerHTML=`<div class="empty">
+                        <h3>Your Bag Is Empty</h3><br>
+                        <p>Shop now to add products to your bag</p><br><br>
+                        <a id="startshop">START SHOPPING</a>
+                        </div>`;
+                    document.getElementById("bottombuy").innerHTML=""
+                    document.getElementById("startshop").onclick=function(){
+                        console.log(window.location.pathname);
+                        window.location.href="../products_data/products.html"
+                    };
+                }else{
+                        cartData.innerHTML="";
+                        let total=0;
+                        prevItem.map(el=>total+=el.price)
+                        console.log(total)
+                        document.getElementById("subTotal").innerText=`$ ${total}`;
+                        prevItem.map(el=>{
+                        cartData.innerHTML+=`<div class="cartItem">
+                                            <img src=${el.image} width="90px" alt="">
+                                            <div>
+                                                <h3>${el.title}</h3>
+                                                <div>
+                                                    <p>Qty: 1</p>
+                                                    <p>$ ${el.price}</p>
+                                                </div>
+                                            </div>
+                                        </div>`
+                                        
+                    })
+                }
+            }
+                setSideCart()
             console.log(prevItem);
             window.location.href="../cart.html"
 

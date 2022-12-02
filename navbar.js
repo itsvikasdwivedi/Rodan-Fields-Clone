@@ -1,3 +1,4 @@
+ const api="https://rodandata.onrender.com/product"
  const navbar=()=>{
     console.log("here")
     document.getElementById("navbar").innerHTML=`<nav id="v-navbar-I">
@@ -100,7 +101,6 @@
                         <button type="submit">login</button>
                     </div>
                 </form>
-                // <div id="gsignin2" data-onsuccess="onSignIn">Google</div>
             </div>
         </div>
 
@@ -117,23 +117,31 @@
             <div class="modal" id="modal">
                 <div class="modal-header">
                     <div class="title">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-bag" viewBox="0 0 16 16">
                             <path
                                 d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
                         </svg>
-
+                        <span id="innercounteritem" class="innercounteritem"></span>
                     </div>
                     <div class="title">
                         <p>Your Bag</p>
                     </div>
                     <button data-close-button class="close-button">&times;</button>
                 </div>
-                <div class="modal-body">
-                    <div>
-                        <h3>Your Bag Is Empty</h3><br>
-                        <p>Shop now to add products to your bag</p><br><br>
-                        <a href="">START SHOPPING</a>
+                <div class="modal-body" >
+                    <div id="cartshow" class="cartshow">
+
+                    </div>
+                    
+                    <div class="btnsub" id="bottombuy">
+                        <div class="subtotal">
+                            <span>SUBTOTAL</span>
+                            <span id="subTotal"></span>
+                        </div>
+                        <div class="btncheck">
+                            <button id="review">REVIEW BAG & CHECKOUT</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -288,10 +296,10 @@ openModalButtons.forEach(button => {
     openModal(modal)
   })
 })
-document.getElementById("v-bag-button").addEventListener("click",()=>{
+document.getElementById("review").addEventListener("click",()=>{
   if(window.location.pathname=="/Team-Rodan/cart.html"){
     window.location.href="./cart.html"
-  }else{
+  }else {
     window.location.href="../cart.html"
   }
 })
@@ -368,7 +376,7 @@ const showit=async()=>{
     }
     if(results.length>0){
 
-        var res = await fetch(`https://clone-of-rodan.herokuapp.com/product?q=${results}`);
+        var res = await fetch(`${api}?q=${results}`);
         var res2 = await res.json();
         console.log(res2);
         if(res2.length>0){
@@ -400,6 +408,48 @@ const showit=async()=>{
         
     }
 }
+var prod=JSON.parse(localStorage.getItem("button-press-data"))||[];
+document.getElementById("counteritem").innerText=prod.length;
+document.getElementById("innercounteritem").innerText=prod.length;
+const setSideCart=()=>{
+    console.log(prod);
+    let cartData=document.getElementById("cartshow");
+    if(prod.length==0){
+        cartData.innerHTML="";
+        cartData.innerHTML=`<div class="empty">
+            <h3>Your Bag Is Empty</h3><br>
+            <p>Shop now to add products to your bag</p><br><br>
+            <a id="startshop">START SHOPPING</a>
+            </div>`;
+        document.getElementById("bottombuy").innerHTML=""
+        document.getElementById("startshop").onclick=function(){
+            console.log(window.location.pathname);
+            window.location.href="../products_data/products.html"
+        };
+    }else{
+            cartData.innerHTML="";
+            let total=0;
+            prod.map(el=>total+=el.price)
+            console.log(total)
+            document.getElementById("subTotal").innerText=`$ ${total}`;
+            prod.map(el=>{
+            cartData.innerHTML+=`<div class="cartItem">
+                                <img src=${el.image} width="90px" alt="">
+                                <div>
+                                    <h3>${el.title}</h3>
+                                    <div>
+                                        <p>Qty: 1</p>
+                                        <p>$ ${el.price}</p>
+                                    </div>
+                                </div>
+                            </div>`
+                            
+        })
+    }
+}
+window.addEventListener("load",setSideCart);
+
+
 document.getElementById("searchTerm").addEventListener("input",debounce(showit,500));
 
 // addto cart is still remaining
