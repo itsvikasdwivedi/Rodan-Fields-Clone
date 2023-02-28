@@ -1,7 +1,7 @@
- const api="https://rodandata.onrender.com/product"
- const navbar=()=>{
+const api = "https://rodandata.onrender.com/product"
+const navbar = () => {
     console.log("here")
-    document.getElementById("navbar").innerHTML=`<nav id="v-navbar-I">
+    document.getElementById("navbar").innerHTML = `<nav id="v-navbar-I">
     <div class="v-Consult">
         <p><a href="#"></a>find a consultant</p>
     </div>
@@ -271,169 +271,169 @@
     </div>
 </div>`
 
-// document.getElementById("gsignin2").addEventListener("click",onSignIn)
-// function onSignIn(googleUser) {
-//     var profile = googleUser.getBasicProfile();
-//     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-//     console.log('Name: ' + profile.getName());
-//     console.log('Image URL: ' + profile.getImageUrl());
-//     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-//   }
-const openModalButtons = document.querySelectorAll('[data-modal-target]')
-const closeModalButtons = document.querySelectorAll('[data-close-button]')
-const overlay = document.getElementById('overlay')
-document.getElementById("logo").addEventListener("click",()=>{
-  // console.log(window.location.)
-  if(window.location.pathname=="/Team-Rodan/cart.html"){
-    window.location.href="index.html"
-  }else{
-    window.location.href="../index.html"
-  }
-})
-openModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = document.querySelector(button.dataset.modalTarget)
-    openModal(modal)
-  })
-})
-document.getElementById("review").addEventListener("click",()=>{
-  if(window.location.pathname=="/Team-Rodan/cart.html"){
-    window.location.href="./cart.html"
-  }else {
-    window.location.href="../cart.html"
-  }
-})
-
-overlay.addEventListener('click', () => {
-  const modals = document.querySelectorAll('.modal.active')
-  modals.forEach(modal => {
-    closeModal(modal)
-  })
-})
-
-closeModalButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = button.closest('.modal')
-    closeModal(modal)
-  })
-})
-
-function openModal(modal) {
-  if (modal == null) return
-  modal.classList.add('active')
-  overlay.classList.add('active')
-}
-
-function closeModal(modal) {
-  if (modal == null) return
-  modal.classList.remove('active')
-  overlay.classList.remove('active')
-}
-
-
-document.getElementById("abd").addEventListener("click",myFunction)
-// function for search bar 
-function myFunction() {
-  event.preventDefault();
-  document.getElementById("myDropdown").style.display="block";
-
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-    //   if (openDropdown.classList.contains('show')) {
-    //     openDropdown.classList.remove('show');
+    // document.getElementById("gsignin2").addEventListener("click",onSignIn)
+    // function onSignIn(googleUser) {
+    //     var profile = googleUser.getBasicProfile();
+    //     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    //     console.log('Name: ' + profile.getName());
+    //     console.log('Image URL: ' + profile.getImageUrl());
+    //     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
     //   }
-    }
-  }
-}
-document.getElementById("removeIT").addEventListener("click",removeSearchBar)
-function removeSearchBar(){
-document.getElementById("myDropdown").style.display="none";
-// console.log("ho gya");
-}
-const debounce =(fn,delay)=>{
-    let timer;
-    return function(){
-        console.log(timer);
-        clearTimeout(timer);
-        timer=setTimeout(function(){
-            fn.call();
-        },delay)
-    }
-}
-const showit=async()=>{
-    var results=document.getElementById("searchTerm").value;
-    console.log(results.length);
-    if(results.length==0){
-        var Sresults=document.getElementById("searchItem");
-            Sresults.innerHTML="";
-    }
-    if(results.length>0){
+    const openModalButtons = document.querySelectorAll('[data-modal-target]')
+    const closeModalButtons = document.querySelectorAll('[data-close-button]')
+    const overlay = document.getElementById('overlay')
+    document.getElementById("logo").addEventListener("click", () => {
+        // console.log(window.location.)
+        if (window.location.pathname == "/Team-Rodan/cart.html") {
+            window.location.href = "index.html"
+        } else {
+            window.location.href = "../index.html"
+        }
+    })
+    openModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = document.querySelector(button.dataset.modalTarget)
+            openModal(modal)
+        })
+    })
+    document.getElementById("review").addEventListener("click", () => {
+        if (window.location.pathname == "/Team-Rodan/cart.html") {
+            window.location.href = "./cart.html"
+        } else {
+            window.location.href = "../cart.html"
+        }
+    })
 
-        var res = await fetch(`${api}?q=${results}`);
-        var res2 = await res.json();
-        console.log(res2);
-        if(res2.length>0){
-            var Sresults=document.getElementById("searchItem");
-            Sresults.innerHTML="";
+    overlay.addEventListener('click', () => {
+        const modals = document.querySelectorAll('.modal.active')
+        modals.forEach(modal => {
+            closeModal(modal)
+        })
+    })
 
-            res2.map(el=>{
-                var div = document.createElement("div");
-                div.setAttribute("class","items");
-                div.onclick=()=>{
-                    localStorage.setItem("card-press-data",el.Id);
-                    if(window.location.pathname="Team-Rodan/cart.html"){
-                        window.location.href="./productInfo/productInfo.html";
-                    }else{
-                        window.location.href="../productInfo/productInfo.html";
-    
+    closeModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('.modal')
+            closeModal(modal)
+        })
+    })
+
+    function openModal(modal) {
+        if (modal == null) return
+        modal.classList.add('active')
+        overlay.classList.add('active')
+    }
+
+    function closeModal(modal) {
+        if (modal == null) return
+        modal.classList.remove('active')
+        overlay.classList.remove('active')
+    }
+
+
+    document.getElementById("abd").addEventListener("click", myFunction)
+    // function for search bar 
+    function myFunction() {
+        event.preventDefault();
+        document.getElementById("myDropdown").style.display = "block";
+
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                //   if (openDropdown.classList.contains('show')) {
+                //     openDropdown.classList.remove('show');
+                //   }
+            }
+        }
+    }
+    document.getElementById("removeIT").addEventListener("click", removeSearchBar)
+    function removeSearchBar() {
+        document.getElementById("myDropdown").style.display = "none";
+        // console.log("ho gya");
+    }
+    const debounce = (fn, delay) => {
+        let timer;
+        return function () {
+            console.log(timer);
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                fn.call();
+            }, delay)
+        }
+    }
+    const showit = async () => {
+        var results = document.getElementById("searchTerm").value;
+        console.log(results.length);
+        if (results.length == 0) {
+            var Sresults = document.getElementById("searchItem");
+            Sresults.innerHTML = "";
+        }
+        if (results.length > 0) {
+
+            var res = await fetch(`${api}?q=${results}`);
+            var res2 = await res.json();
+            console.log(res2);
+            if (res2.length > 0) {
+                var Sresults = document.getElementById("searchItem");
+                Sresults.innerHTML = "";
+
+                res2.map(el => {
+                    var div = document.createElement("div");
+                    div.setAttribute("class", "items");
+                    div.onclick = () => {
+                        localStorage.setItem("card-press-data", el.Id);
+                        if (window.location.pathname = "Team-Rodan/cart.html") {
+                            window.location.href = "./productInfo/productInfo.html";
+                        } else {
+                            window.location.href = "../productInfo/productInfo.html";
+
+                        }
                     }
-                }
-                var image = document.createElement("img");
-                image.src=el.image;
-                var p1 = document.createElement('p');
-                p1.innerHTML=el.title;
-                var p2 = document.createElement('p');
-                p2.innerHTML=`$${el.price}`;
-                div.append(image,p1,p2);
-                Sresults.append(div);
-            })
+                    var image = document.createElement("img");
+                    image.src = el.image;
+                    var p1 = document.createElement('p');
+                    p1.innerHTML = el.title;
+                    var p2 = document.createElement('p');
+                    p2.innerHTML = `$${el.price}`;
+                    div.append(image, p1, p2);
+                    Sresults.append(div);
+                })
+            }
+
+        }
     }
-        
-    }
-}
-var prod=JSON.parse(localStorage.getItem("button-press-data"))||[];
-document.getElementById("counteritem").innerText=prod.length;
-document.getElementById("innercounteritem").innerText=prod.length;
-const setSideCart=()=>{
-    console.log(prod);
-    let cartData=document.getElementById("cartshow");
-    if(prod.length==0){
-        cartData.innerHTML="";
-        cartData.innerHTML=`<div class="empty">
+    var prod = JSON.parse(localStorage.getItem("button-press-data")) || [];
+    document.getElementById("counteritem").innerText = prod.length;
+    document.getElementById("innercounteritem").innerText = prod.length;
+    const setSideCart = () => {
+        console.log(prod);
+        let cartData = document.getElementById("cartshow");
+        if (prod.length == 0) {
+            cartData.innerHTML = "";
+            cartData.innerHTML = `<div class="empty">
             <h3>Your Bag Is Empty</h3><br>
             <p>Shop now to add products to your bag</p><br><br>
             <a id="startshop">START SHOPPING</a>
             </div>`;
-        document.getElementById("bottombuy").innerHTML=""
-        document.getElementById("startshop").onclick=function(){
-            console.log(window.location.pathname);
-            window.location.href="../products_data/products.html"
-        };
-    }else{
-            cartData.innerHTML="";
-            let total=0;
-            prod.map(el=>total+=el.price)
+            document.getElementById("bottombuy").innerHTML = ""
+            document.getElementById("startshop").onclick = function () {
+                console.log(window.location.pathname);
+                window.location.href = "../products_data/products.html"
+            };
+        } else {
+            cartData.innerHTML = "";
+            let total = 0;
+            prod.map(el => total += el.price)
             console.log(total)
-            document.getElementById("subTotal").innerText=`$ ${total}`;
-            prod.map(el=>{
-            cartData.innerHTML+=`<div class="cartItem">
+            document.getElementById("subTotal").innerText = `$ ${total}`;
+            prod.map(el => {
+                cartData.innerHTML += `<div class="cartItem">
                                 <img src=${el.image} width="90px" alt="">
                                 <div>
                                     <h3>${el.title}</h3>
@@ -443,26 +443,26 @@ const setSideCart=()=>{
                                     </div>
                                 </div>
                             </div>`
-                            
-        })
+
+            })
+        }
     }
+    window.addEventListener("load", setSideCart);
+
+
+    document.getElementById("searchTerm").addEventListener("input", debounce(showit, 500));
+
+    // addto cart is still remaining
+    // var prod=JSON.parse(localStorage.getItem("button-press-data"))||[];
+    // console.log(prod);
+    // if(window.location.pathname=="Team-Rodan/products_data/products.html"){
+    //     document.getElementById("addtobag").addEventListener("click",()=>{
+    //         console.log("sdf")
+    //         document.getElementById("counteritem").classList.add("show");
+    //         document.getElementById("counteritem").innerHTML=JSON.parse(localStorage.getItem("button-press-data")).length;
+    //     })
+    // }
+
 }
-window.addEventListener("load",setSideCart);
-
-
-document.getElementById("searchTerm").addEventListener("input",debounce(showit,500));
-
-// addto cart is still remaining
-// var prod=JSON.parse(localStorage.getItem("button-press-data"))||[];
-// console.log(prod);
-// if(window.location.pathname=="Team-Rodan/products_data/products.html"){
-//     document.getElementById("addtobag").addEventListener("click",()=>{
-//         console.log("sdf")
-//         document.getElementById("counteritem").classList.add("show");
-//         document.getElementById("counteritem").innerHTML=JSON.parse(localStorage.getItem("button-press-data")).length;
-//     })
-// }
-
-}
- export default navbar;
+export default navbar;
 // sakti_a,and body

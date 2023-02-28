@@ -1549,7 +1549,6 @@
     }
   ],
   "product": [
-
     {
       "Id": 4,
       "title": "Total RF Serum",
@@ -1607,7 +1606,6 @@
       "img_3": "https://www.rodanandfields.com/en-us/medias/ENFG010-ITFG-Texture1-570x570.jpg?context=bWFzdGVyfHJvb3R8ODE2N3xpbWFnZS9qcGVnfGhkOS9oMzcvMTQ5NjkwODcxNjQ0NDYuanBnfGJlODFiNDMzNGJmODAwOTJkZWQwY2ExNWMzMjJiMzU0Mjc2ZjNhNjE4NjdjZDg4MmNkZTNjYzE3MjZjZmM1MDk",
       "img_4": "https://www.rodanandfields.com/en-us/medias/ENFGR10-ITFG-Refill-GIF-570x570.gif?context=bWFzdGVyfHJvb3R8NDAyNTkwfGltYWdlL2dpZnxoMjEvaDA1LzE0OTY5MDg3NTU3NjYyLmdpZnw4NTNlNDQ4NWZiYzdhMjkwNzQ0MDUzNTA5OGI5Nzg3MjVlN2NlYjI1MzdhYTNhNGE5MjJjZTI1MTlkMjU4NDVj"
     },
-
     {
       "Id": 1,
       "title": "R+F Instant Targeted Firming Gel™",
@@ -1627,9 +1625,6 @@
       "img_3": "https://www.rodanandfields.com/en-us/medias/ENFG010-ITFG-Texture1-570x570.jpg?context=bWFzdGVyfHJvb3R8ODE2N3xpbWFnZS9qcGVnfGhkOS9oMzcvMTQ5NjkwODcxNjQ0NDYuanBnfGJlODFiNDMzNGJmODAwOTJkZWQwY2ExNWMzMjJiMzU0Mjc2ZjNhNjE4NjdjZDg4MmNkZTNjYzE3MjZjZmM1MDk",
       "img_4": "https://www.rodanandfields.com/en-us/medias/ENFGR10-ITFG-Refill-GIF-570x570.gif?context=bWFzdGVyfHJvb3R8NDAyNTkwfGltYWdlL2dpZnxoMjEvaDA1LzE0OTY5MDg3NTU3NjYyLmdpZnw4NTNlNDQ4NWZiYzdhMjkwNzQ0MDUzNTA5OGI5Nzg3MjVlN2NlYjI1MzdhYTNhNGE5MjJjZTI1MTlkMjU4NDVj"
     },
-    
-    
-    
     {
       "Id": 5,
       "title": "REDEFINE Multi-Function Eye Cream",
@@ -1751,7 +1746,7 @@
       "category": "Regimen",
       "application_area": "Face",
       "skin_concern": "Fine Lines & Wrinkles",
-      "hover":"https://www.rodanandfields.com/en-us/medias/Category-Image-1.png?context=bWFzdGVyfHJvb3R8MzcxNDI1fGltYWdlL3BuZ3xoOGIvaDJiLzEzOTAwNTk3MTMzMzQyLnBuZ3w5NTMwMDY2NDkxOTRmNDI1Mjc5ZjIyOTYxYjUyZTFiNDkyNDZhODZmNTJlZmQ4ZjU4NzBmZjI2NzFiMzhmZTMy",
+      "hover": "https://www.rodanandfields.com/en-us/medias/Category-Image-1.png?context=bWFzdGVyfHJvb3R8MzcxNDI1fGltYWdlL3BuZ3xoOGIvaDJiLzEzOTAwNTk3MTMzMzQyLnBuZ3w5NTMwMDY2NDkxOTRmNDI1Mjc5ZjIyOTYxYjUyZTFiNDkyNDZhODZmNTJlZmQ4ZjU4NzBmZjI2NzFiMzhmZTMy",
       "product_line": "Spotless",
       "img_1": "https://www.rodanandfields.com/en-us/medias/UNRS001-1168x1168-MOBILE.jpg?context=bWFzdGVyfGltYWdlc3w1NTAzMnxpbWFnZS9qcGVnfGltYWdlcy9oMmEvaDFiLzExMzU3NzEzMDcyMTU4LmpwZ3xhZTE3ZmM3NTk5ZmFlYmJhZWViYTAyYjk2YWIyMmU2MjA0NTYyNzQ2N2RjZmYyNmMxMjU5Yzc2ODAyOTEyMWFi",
       "img_2": "https://www.rodanandfields.com/en-us/medias/UNRS001-PDP-lifestyle-1168x1168-MOBILE.jpg?context=bWFzdGVyfGltYWdlc3w2NjM0M3xpbWFnZS9qcGVnfGltYWdlcy9oNjAvaDg5Lzg4MjE4NzkwNzg5NDIuanBnfDExNWU0YWVjNTU5YWRiOTkyNGI5YzYwNjg2M2FjZmYzMjdlODcxNTAyYjg3ZDI5ZmNjZWE4NDM3MzZkODExYTU"
@@ -1766,7 +1761,7 @@
       "rating": "4.8",
       "rating_votes": "(9059)",
       "perk_price": 101,
-      "hover":"https://www.rodanandfields.com/en-us/medias/Category-Image-2.png?context=bWFzdGVyfHJvb3R8Mzg1Mjk1fGltYWdlL3BuZ3xoOGUvaGI2LzEzOTAwNTk3MTk4ODc4LnBuZ3xmYzY3MThiYTcyZTNiMjhjNTI4MGZjNTUxMTY5OTgwNjFhMWQzM2Y0ZWQyZjJjMTUwOGEwYjBmM2Y1NjVlMTI3",
+      "hover": "https://www.rodanandfields.com/en-us/medias/Category-Image-2.png?context=bWFzdGVyfHJvb3R8Mzg1Mjk1fGltYWdlL3BuZ3xoOGUvaGI2LzEzOTAwNTk3MTk4ODc4LnBuZ3xmYzY3MThiYTcyZTNiMjhjNTI4MGZjNTUxMTY5OTgwNjFhMWQzM2Y0ZWQyZjJjMTUwOGEwYjBmM2Y1NjVlMTI3",
       "category": "Face Serums",
       "application_area": "Body",
       "skin_concern": "Dry Skin",
@@ -1784,7 +1779,7 @@
       "rating": "4.5",
       "rating_votes": "(6204)",
       "perk_price": 65,
-      "hover":"https://www.rodanandfields.com/en-us/medias/Category-Image-3.png?context=bWFzdGVyfHJvb3R8MzU2OTI0fGltYWdlL3BuZ3xoNDMvaGJkLzEzOTAwNTk3MjY0NDE0LnBuZ3xhMWMzNDBiMGI0MWJmNjkwMDk2NDc0NGMxMjc4ZjljYzMzODYyYTRmNGUyNjFiYjZlOWZhOWM4ZmUzYTFjZmYz",
+      "hover": "https://www.rodanandfields.com/en-us/medias/Category-Image-3.png?context=bWFzdGVyfHJvb3R8MzU2OTI0fGltYWdlL3BuZ3xoNDMvaGJkLzEzOTAwNTk3MjY0NDE0LnBuZ3xhMWMzNDBiMGI0MWJmNjkwMDk2NDc0NGMxMjc4ZjljYzMzODYyYTRmNGUyNjFiYjZlOWZhOWM4ZmUzYTFjZmYz",
       "category": "Eyes",
       "application_area": "Face",
       "skin_concern": "Dry Skin",
@@ -1802,10 +1797,9 @@
       "rating": "4.9",
       "rating_votes": "(7278)",
       "perk_price": 59,
-    
       "category": "Hand & Body",
       "application_area": "Body",
-      "hover":"https://www.rodanandfields.com/en-us/medias/Category-Image-4.png?context=bWFzdGVyfHJvb3R8MzEzMzg3fGltYWdlL3BuZ3xoYjIvaDMwLzEzOTAwNTk3MzI5OTUwLnBuZ3xlOGYwOTgwZmYxNWIzNGVhNjZiN2I1NGI0NWVmZTFhOGQwYmJlOGMzZjE5NzA4ODRjNjZlMzliZDAzZjVhNDk0",
+      "hover": "https://www.rodanandfields.com/en-us/medias/Category-Image-4.png?context=bWFzdGVyfHJvb3R8MzEzMzg3fGltYWdlL3BuZ3xoYjIvaDMwLzEzOTAwNTk3MzI5OTUwLnBuZ3xlOGYwOTgwZmYxNWIzNGVhNjZiN2I1NGI0NWVmZTFhOGQwYmJlOGMzZjE5NzA4ODRjNjZlMzliZDAzZjVhNDk0",
       "skin_concern": "Dry Skin",
       "product_line": "Reverse",
       "img_1": "https://www.rodanandfields.com/en-us/medias/ENBR001-detail.jpg?context=bWFzdGVyfHJvb3R8NDA3NjR8aW1hZ2UvanBlZ3xoMTEvaDAxLzEzNTMzMTYyODY0NjcwLmpwZ3wxMmYxZGIxY2UzMWI1OWRlMTk0MTUyMTNjZGU3ZDRjODY5NjNjMTkwOTA2NGE2MjM5MGJhZjcwMTYzNmY3ZWUz",
@@ -1818,9 +1812,8 @@
       "image": "https://www.rodanandfields.com/en-us/medias/ENPS125-570x570-Desktop.png?context=bWFzdGVyfGltYWdlc3wxODU1NXxpbWFnZS9wbmd8aW1hZ2VzL2gyNi9oZjgvMTQ1MzIxNjc2MzA4NzgucG5nfGM0YTc0NjM0YWIzM2QxZDZlOTc0NTdmYjA4M2EyNDA5NGJhODg3ZDQwMGJjZjdiMTZlYTI2MjYwNjI2Y2JhZGE",
       "status": "Best Seller",
       "info": "Exfoliates away dead skin cells for smoother, vibrant-looking skin after just one use.",
-      "hover":"https://www.rodanandfields.com/en-us/medias/Category-Image-6.png?context=bWFzdGVyfHJvb3R8Mzc1MzQ5fGltYWdlL3BuZ3xoMjEvaDdiLzEzOTAwNTk3NDYxMDIyLnBuZ3xkNjNjZjczZWMzYzM4MDIyMjA1NzIwOTgwZDM0YTU4MGIzMmY1YmZlZGM2Y2I5ODdmZWU4NDEzMjAxOTgxZGY0",
+      "hover": "https://www.rodanandfields.com/en-us/medias/Category-Image-6.png?context=bWFzdGVyfHJvb3R8Mzc1MzQ5fGltYWdlL3BuZ3xoMjEvaDdiLzEzOTAwNTk3NDYxMDIyLnBuZ3xkNjNjZjczZWMzYzM4MDIyMjA1NzIwOTgwZDM0YTU4MGIzMmY1YmZlZGM2Y2I5ODdmZWU4NDEzMjAxOTgxZGY0",
       "price": 83,
-      
       "rating": "4.8",
       "rating_votes": "(4510)",
       "perk_price": 75,
@@ -1841,7 +1834,7 @@
       "rating": "4.4",
       "rating_votes": "(464)",
       "perk_price": 101,
-      "hover":"https://www.rodanandfields.com/en-us/medias/Category-Image-5.png?context=bWFzdGVyfHJvb3R8MjU0NDM1fGltYWdlL3BuZ3xoYjAvaGY4LzEzOTAwNTk3Mzk1NDg2LnBuZ3xlMmE5ZWIyN2YyYTVjZjZiZTVkZmUyZjJjODhmY2Q5MTdmMWM0NWQ1NTQ4MzFmZjM3YjUyNWI3M2NhYjI3ZTll",
+      "hover": "https://www.rodanandfields.com/en-us/medias/Category-Image-5.png?context=bWFzdGVyfHJvb3R8MjU0NDM1fGltYWdlL3BuZ3xoYjAvaGY4LzEzOTAwNTk3Mzk1NDg2LnBuZ3xlMmE5ZWIyN2YyYTVjZjZiZTVkZmUyZjJjODhmY2Q5MTdmMWM0NWQ1NTQ4MzFmZjM3YjUyNWI3M2NhYjI3ZTll",
       "category": "Eyes",
       "application_area": "Eyes",
       "skin_concern": "Dry Skin",

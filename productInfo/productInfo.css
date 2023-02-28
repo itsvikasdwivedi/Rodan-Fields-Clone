@@ -1,4 +1,4 @@
-#g_proHead{
+#g_proHead {
     font-size: 12px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 85%;
@@ -8,7 +8,7 @@
 
 
 /* ---photo--- */
-#g_mainContainer{
+#g_mainContainer {
     width: 78%;
     margin: 15px auto;
     display: flex;
@@ -16,91 +16,110 @@
     gap: 100px;
     position: relative;
 }
-.listImage{
+
+.listImage {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-right: 10px;
 }
-.listImage>li{
+
+.listImage>li {
     width: 49px;
     height: 49px;
     list-style: none;
     border: 1px solid #dfdfdf;
 }
-.listImage>li:hover{
+
+.listImage>li:hover {
     border: 1px solid #000000;
 }
-.listImage>li:active{
+
+.listImage>li:active {
     border: 1px solid #000000;
 
 }
-.listImage>li>img{
+
+.listImage>li>img {
     width: 100%;
     object-fit: cover;
 }
-.mainImage>img{
+
+.mainImage>img {
     width: 566px;
     height: 566px;
 }
 
 /* ----desc---- */
-.fullInfo *{
+.fullInfo * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.fullInfo>p:first-child{
+
+.fullInfo>p:first-child {
     font-size: 12px;
     font-weight: 600;
     color: #7c7f88;
 }
-.fullInfo>h2{
+
+.fullInfo>h2 {
     font-size: 24px;
     font-weight: 400;
     color: #222222;
 }
-.fullInfo>p:nth-child(3),.fullInfo>p:nth-child(4){
+
+.fullInfo>p:nth-child(3),
+.fullInfo>p:nth-child(4) {
     font-size: 14px;
     color: #222222;
     font-weight: 400;
 }
-#priceBox{
+
+#priceBox {
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
     /* height: 60px; */
 }
-#priceBox>div:first-child{
-    width:45%;
+
+#priceBox>div:first-child {
+    width: 45%;
     border-right: 1px solid grey;
 }
-#priceBox>div:last-child{
+
+#priceBox>div:last-child {
     padding-left: 30px;
 }
-#g_retailPrice{
+
+#g_retailPrice {
     font-size: 20px;
     font-weight: 600;
     color: #222222;
 }
-#priceBox>div:first-child>span:last-child{
+
+#priceBox>div:first-child>span:last-child {
     font-size: 12px;
     color: #2b2b2b;
     font-weight: 500;
 }
-#g_perkedPrice{
+
+#g_perkedPrice {
     font-size: 20px;
     font-weight: 600;
     color: #757575;
 }
-#priceBox>div:last-child>span:last-child{
+
+#priceBox>div:last-child>span:last-child {
     font-weight: 500;
     font-size: 12px;
     color: #757575;
     text-decoration: underline;
 }
-.fullInfo hr{
+
+.fullInfo hr {
     color: #eae7e4;
 }
-#g_add{
+
+#g_add {
     margin-top: 20px;
     width: 100%;
     background-color: #222222;
@@ -113,64 +132,74 @@
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-.offer60{
+
+.offer60 {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 20px;
     background-color: #faf6f5;
     padding: 10px;
 }
-.offer60>span:first-child{
+
+.offer60>span:first-child {
     font-size: 16px;
     font-weight: 500;
 }
-.offer60>span:last-child{
+
+.offer60>span:last-child {
     font-size: 12px;
     font-weight: 400;
 }
-.g_details{
+
+.g_details {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding:10px 0;
+    padding: 10px 0;
     padding-right: 10px;
     color: #222;
 }
-.g_bold{
+
+.g_bold {
     font-weight: 600;
     color: #000000;
     font-size: 14px;
 }
-.g_para1{
+
+.g_para1 {
     font-size: 14px;
     width: 100%;
     line-height: 170%;
     display: none;
 }
-.g_para1.show{
+
+.g_para1.show {
     display: block;
 }
 
-.dontShow{
+.dontShow {
     display: none;
 }
 
 @media screen and (max-width:480px) {
-    .listImage{
+    .listImage {
         display: none;
     }
-    #g_mainContainer{
+
+    #g_mainContainer {
         flex-direction: column;
         width: 100%;
-        gap:10px;
+        gap: 10px;
     }
-    .mainImage>img{
+
+    .mainImage>img {
         width: 100%;
         height: 70%;
         object-fit: contain;
     }
-    #g_add{
+
+    #g_add {
         width: 95%;
         position: fixed;
         bottom: 20px;
@@ -178,27 +207,32 @@
         left: 10px;
         padding: 15px 0;
     }
-    #g_proHead{
+
+    #g_proHead {
         display: none;
     }
 }
 
 @media screen and (min-width:481px) and (max-width:1024px) {
-    #g_proHead{
+    #g_proHead {
         display: none;
     }
-    #g_mainContainer{
+
+    #g_mainContainer {
         width: 90%;
         margin: 10px auto;
         gap: 10px;
     }
-    .fullInfo{
-        width:600px;
+
+    .fullInfo {
+        width: 600px;
     }
-    .listImage{
+
+    .listImage {
         display: none;
     }
-    .mainImage>img{
+
+    .mainImage>img {
         width: 100%;
         height: 70%;
         object-fit: contain;

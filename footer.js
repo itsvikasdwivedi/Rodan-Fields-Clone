@@ -1,5 +1,5 @@
-export const footer=()=>{
-    document.getElementById("footer").innerHTML=`
+export const footer = () => {
+    document.getElementById("footer").innerHTML = `
     <div id="footerHead">
             <div>
                 <ul >
@@ -47,10 +47,10 @@ export const footer=()=>{
             </ul>
         </div>
     `
-    document.getElementById("clickOne").addEventListener("click",()=>{
+    document.getElementById("clickOne").addEventListener("click", () => {
         document.getElementById("clickOne").classList.toggle("click");
     })
-    document.getElementById("clickTwo").addEventListener("click",()=>{
+    document.getElementById("clickTwo").addEventListener("click", () => {
         document.getElementById("clickTwo").classList.toggle("clicktwo");
     })
 }
